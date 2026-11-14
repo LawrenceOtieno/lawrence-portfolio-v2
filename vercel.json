@@ -1,0 +1,11 @@
+{
+  "builds": [
+    { "src": "app.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/static/(.*)", "headers": { "cache-control": "public, max-age=31536000, immutable" }, "dest": "/static/$1" },
+    { "src": "/sitemap.xml", "headers": { "content-type": "application/xml" }, "dest": "/app.py" },
+    { "src": "/robots.txt",  "headers": { "content-type": "text/plain" },    "dest": "/app.py" },
+    { "src": "/(.*)",        "dest": "/app.py" }
+  ]
+}
