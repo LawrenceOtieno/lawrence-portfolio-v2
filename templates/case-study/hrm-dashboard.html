@@ -1,12 +1,148 @@
 {% extends "base.html" %}
 
 {% block title %}HRM Executive Dashboard — Case Study | Lawrence Otieno{% endblock %}
-{% block meta_desc %}How I turned messy HR data from SimbaNet into a clear dashboard. Python · Streamlit · Plotly.{% endblock %}
+{% block meta_desc %}How I turned messy HR data from SimbaNet into a clear dashboard showing where staff leave and why. Python · Streamlit · Plotly.{% endblock %}
 
 {% block content %}
-<section class="max-w-shell mx-auto px-6 py-24">
-  <h1 class="font-display text-3xl md:text-4xl font-bold text-teal-900">
-    Case study page — content comes in Step 7
-  </h1>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     CASE STUDY HERO
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="bg-teal-900 text-paper-50 py-20 md:py-28 relative overflow-hidden">
+  <!-- Background Decoration -->
+  <div aria-hidden="true" class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-teal-500/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+  
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <a href="{{ url_for('index') }}#case-studies" class="inline-flex items-center gap-2 text-teal-300 hover:text-white transition-colors text-sm font-medium mb-8">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      Back to Portfolio
+    </a>
+    
+    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+      Turning Messy HR Data Into a Simple, <span class="text-orange-500">Useful Dashboard</span>
+    </h1>
+    
+    <!-- Meta Pills -->
+    <div class="flex flex-wrap justify-center gap-3 text-sm font-medium">
+      <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10 text-teal-100"><strong class="text-white">Client:</strong> SimbaNet</span>
+      <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10 text-teal-100"><strong class="text-white">Role:</strong> Data / Business Analyst</span>
+      <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10 text-teal-100"><strong class="text-white">Tools:</strong> Python, Streamlit, Plotly</span>
+    </div>
+  </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     IMPACT BOX
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="max-w-4xl mx-auto px-6 -mt-8 relative z-10">
+  <div class="bg-white border-l-4 border-orange-500 shadow-xl shadow-teal-900/5 rounded-r-xl p-6 md:p-8">
+    <p class="text-lg md:text-xl text-teal-900 font-medium leading-relaxed italic">
+      "I was given SimbaNet's raw HR data with no easy way to use it. I checked the data for mistakes, fixed the ones I found, and built a simple dashboard from scratch that helps leaders see, in plain terms, where staff are leaving and why."
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     MAIN CONTENT (STAR METHOD)
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="max-w-4xl mx-auto px-6 py-16 space-y-16">
+
+  <!-- 1. Situation -->
+  <div>
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center font-bold">1</div>
+      <h2 class="font-display text-2xl font-bold text-teal-900">The Situation</h2>
+    </div>
+    <div class="text-ink-500 leading-relaxed space-y-4">
+      <p>SimbaNet, a company with offices in four cities in Kenya — Nairobi, Mombasa, Kisumu, and Nakuru — had information about all of its staff: who worked there, what they were paid, how long they'd stayed, and who had left. But nobody could actually use this information to answer simple questions, like: <em>Which department is losing the most people? Are staff choosing to leave, or are they being let go? Is pay fair between men and women, and between the four cities?</em></p>
+      <p>The information existed, but it was just sitting there. Nobody had turned it into anything useful. It got worse when I looked closer. Some of the numbers in the data didn't add up. Two columns that were supposed to show the same thing — whether someone still worked there or not — sometimes disagreed with each other. And it wasn't clear if the pay numbers were monthly or yearly.</p>
+      <p class="font-semibold text-teal-900">If these mistakes weren't fixed first, any report built on top of this data could give the wrong answer, and nobody would notice.</p>
+    </div>
+  </div>
+
+  <!-- 2. Task -->
+  <div>
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center font-bold">2</div>
+      <h2 class="font-display text-2xl font-bold text-teal-900">The Task</h2>
+    </div>
+    <div class="text-ink-500 leading-relaxed">
+      <p>My job was to take this raw data, find and fix what was wrong with it, and turn it into an easy-to-use dashboard that could answer SimbaNet's real questions — something that could also be shared with anyone, not just people who could log into the live app.</p>
+    </div>
+  </div>
+
+  <!-- 3. Action -->
+  <div>
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold">3</div>
+      <h2 class="font-display text-2xl font-bold text-teal-900">The Action</h2>
+    </div>
+    <div class="space-y-6">
+      
+      <div class="bg-paper-50 border border-line rounded-xl p-6">
+        <h3 class="font-display font-semibold text-teal-900 mb-2">Checked the data before trusting it</h3>
+        <p class="text-sm text-ink-500">Found that two columns meant to say the same thing didn't always agree, figured out why (they were being filled in separately instead of one coming from the other), and fixed it so they can't disagree anymore. Also checked whether pay numbers were monthly or yearly, and corrected them so they're clear and consistent.</p>
+      </div>
+
+      <div class="bg-paper-50 border border-line rounded-xl p-6">
+        <h3 class="font-display font-semibold text-teal-900 mb-2">Built around real questions, not columns</h3>
+        <p class="text-sm text-ink-500">Made five simple pages: one page that shows everything at a glance, and four pages that each answer one clear question — like "Who's leaving, and why?" or "Is pay fair across our four cities?" Every chart comes with a short, plain note explaining what it shows and why it matters.</p>
+      </div>
+
+      <div class="bg-paper-50 border border-line rounded-xl p-6">
+        <h3 class="font-display font-semibold text-teal-900 mb-2">Let people click to see the real details</h3>
+        <p class="text-sm text-ink-500">Added a feature where clicking on a bar in a chart shows the actual staff records behind that number. When it first didn't work, I found the exact reason — the code was reading the wrong part of the chart — and tested the fix to make sure it actually worked before calling it done.</p>
+      </div>
+
+      <div class="bg-paper-50 border border-line rounded-xl p-6">
+        <h3 class="font-display font-semibold text-teal-900 mb-2">Kept private information private</h3>
+        <p class="text-sm text-ink-500">Staff names are hidden by default everywhere they appear. Only someone with a password can reveal them, and once they enter it, it stays unlocked for the rest of their visit instead of asking again on every page.</p>
+      </div>
+
+      <div class="bg-paper-50 border border-line rounded-xl p-6">
+        <h3 class="font-display font-semibold text-teal-900 mb-2">Made it easy to share</h3>
+        <p class="text-sm text-ink-500">Added buttons to download the whole dashboard as a webpage or as an image, so someone can share the findings by email or in a slide without needing to open the live app. Along the way, I also fixed a technical problem that was stopping the image download from working.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. Result -->
+  <div>
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center font-bold">4</div>
+      <h2 class="font-display text-2xl font-bold text-teal-900">The Result</h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-white border border-line p-5 rounded-xl shadow-sm border-l-4 border-l-teal-500">
+        <strong class="block text-teal-900 mb-1">Found the real story.</strong>
+        <p class="text-sm text-ink-500">Most people who left didn't quit — they were let go. That means this is mostly a hiring and performance problem, not a retention problem.</p>
+      </div>
+      <div class="bg-white border border-line p-5 rounded-xl shadow-sm border-l-4 border-l-orange-500">
+        <strong class="block text-teal-900 mb-1">Found exactly where to look.</strong>
+        <p class="text-sm text-ink-500">One department loses almost twice as many staff as the best one, giving leaders a clear place to start instead of guessing.</p>
+      </div>
+      <div class="bg-white border border-line p-5 rounded-xl shadow-sm border-l-4 border-l-teal-500">
+        <strong class="block text-teal-900 mb-1">Fixed a hidden data problem.</strong>
+        <p class="text-sm text-ink-500">The two columns that used to disagree can no longer do so, so every number on the dashboard can be trusted.</p>
+      </div>
+      <div class="bg-white border border-line p-5 rounded-xl shadow-sm border-l-4 border-l-orange-500">
+        <strong class="block text-teal-900 mb-1">Made it shareable.</strong>
+        <p class="text-sm text-ink-500">The whole dashboard can be downloaded as a file and shared with anyone, even if they can't open the live app.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Demo Link -->
+  <div class="text-center pt-8 border-t border-line">
+    <p class="text-ink-500 mb-4">Want to see the final result?</p>
+    <a href="https://lawrenceotieno-hrm-executive-dashboard-app-wggi3y.streamlit.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-teal-900 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-full transition-colors shadow-lg">
+      View Live Dashboard
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+    </a>
+  </div>
+
+</section>
+
 {% endblock %}

@@ -15,11 +15,132 @@ MAIL_USER = os.environ.get("MAIL_USER")
 MAIL_PASS = os.environ.get("MAIL_PASS")
 MAIL_TO   = "lawrenceit38@gmail.com"
 
-# ── Content data (populated in later steps) ──────────────────────────
-projects = []
-case_studies = []
-testimonials = []
-faqs = []
+# ── Content data ────────────────────────────────────────────────────
+projects = [
+    {"name": "Movies Rating Dashboard", "image": "images/projects/moviesr.png", "tags": ["Python", "HTML", "Streamlit"], "link": "https://github.com/LawrenceOtieno/MovieRatingsDashboard"},
+    {"name": "Gazebo Indoor Environment Generator", "image": "images/projects/gazebo.png", "tags": ["Python", "PX4 Autopilot", "Gazebo"], "link": "https://github.com/LawrenceOtieno/gazebo-indoor-gen"},
+    {"name": "KRA Nil Automator", "image": "images/projects/automator.png", "tags": ["Python", "Playwright", "Waitress"], "link": "https://github.com/LawrenceOtieno/kra-nil-automator"},
+    {"name": "HRM Executive Dashboard", "image": "images/projects/dashboard.png", "tags": ["Python", "Pandas", "Plotly", "Streamlit"], "link": "https://github.com/LawrenceOtieno/hrm-executive-dashboard"},
+    {"name": "NYC TLC A/B Testing", "image": "images/projects/ab-test.png", "tags": ["Python", "SKLearn", "BigQuery"], "link": "#"},
+    {"name": "Customer Churn Turnover - ML", "image": "images/projects/churn-rate.png", "tags": ["Python", "Keras"], "link": "#"},
+    {"name": "PACE Analytical Framework Blog", "image": "images/projects/pace.png", "tags": ["WordPress"], "link": "#"},
+    {"name": "COVID-19 & Youth Bulge Risk", "image": "images/projects/covid-youth.png", "tags": ["Excel", "R", "Research"], "link": "#"},
+    {"name": "HRM Executive Dashboard (Tableau)", "image": "images/projects/hrm.png", "tags": ["Tableau"], "link": "#"},
+]
+
+case_studies = [
+    {
+        "title": "Turning Messy HR Data Into a Simple, Useful Dashboard",
+        "summary": "Cleaned conflicting HR records for 500+ employees across 4 cities, then built an executive dashboard from scratch that shows leaders where staff are leaving and why.",
+        "tags": ["Python", "Streamlit", "Plotly", "Pandas", "Data Cleaning"],
+        "image": "images/case-studies/hrm-case-study-cover.png",
+        "view_url": "/case-study/hrm-dashboard",
+        "pdf_file": "files/hrm_case_study.pdf",
+    },
+]
+
+testimonials = [
+    {
+        "name": "John Kamau",
+        "role": "Data Team Lead",
+        "company": "L-IFT",
+        "quote": "Was incredibly reliable in handling critical system support and optimizing our daily data flows. Their dedication to maintaining flawless ICT infrastructure ensured our operations always ran smoothly.",
+        "rating": 5,
+        "photo": "images/testimonials/john-kamau.png",
+        "anonymous": False,
+    },
+    {
+        "name": "Newton Mbugua",
+        "role": "Software Engineer",
+        "company": "Aesops ke",
+        "quote": "Lawrence is the perfect bridge between business needs and technical execution. He played a vital role in automating our requirements pipeline completely transforming our workflow, letting engineering focus on building software. He is firm, hardworking, and passionate about his work.",
+        "rating": 3.5,
+        "photo": "images/testimonials/newton-mbugua.png",
+        "anonymous": False,
+    },
+    {
+        "name": "Purity Cherono",
+        "role": "Communications Specialist",
+        "company": "Lilt AI",
+        "quote": "Demonstrated outstanding technical precision while documenting complex guidelines for our indigenous language AI models. A highly collaborative engineer who excelled at translating nuanced local variations into structured technical logic.",
+        "rating": 5,
+        "photo": "images/testimonials/purity-cherono.png",
+        "anonymous": False,
+    },
+    {
+        "name": "Norbert Oduor",
+        "role": "Data Product Officer",
+        "company": "ICEA Lion Group",
+        "quote": "Lawrence stepped into our insurance project as a freelancer and instantly simplified massive legacy data into a clear business blueprint. He perfectly bridged our data architecture with actual value, making complex strategy look easy.",
+        "rating": 4.0,
+        "photo": "images/testimonials/norbert-oduor.png",
+        "anonymous": False,
+    },
+    {
+        "name": "Kelly Otieno",
+        "role": "Peer / Technical Collaborator",
+        "company": "",
+        "quote": "A master at structuring backend workflows and building highly organized engineering documentation in Jira and Confluence. Their systematic approach to mapping end-to-end operational processes brought absolute clarity to cross-functional teams.",
+        "rating": 4.5,
+        "photo": "images/testimonials/kelly-otieno.png",
+        "anonymous": False,
+    },
+    {
+        "name": "Lynn Ajema",
+        "role": "Data Analyst",
+        "company": "Aesops ke",
+        "quote": "An exceptional analytical thinker who bridges the gap perfectly between technical system requirements and business processes. From managing complex workflows to optimizing SAP modules, their documentation and reporting are top-tier.",
+        "rating": 5,
+        "photo": "images/testimonials/lynn-ajema.png",
+        "anonymous": False,
+    },
+    {
+        "name": "Anonymous",
+        "role": "Senior Business Analyst",
+        "company": "Private",
+        "quote": "A brilliant strategist with a sharp eye for workflow bottlenecks. They excelled at gathering stakeholders' chaotic requirements and transforming them into beautifully structured, actionable technical solutions.",
+        "rating": 5,
+        "initials": "SBA",
+        "anonymous": True,
+    },
+    {
+        "name": "Anonymous",
+        "role": "DevOps & Automation Engineer",
+        "company": "Private",
+        "quote": "Transformed our slow, manual data entries into automated, highly efficient pipelines. They possessed a deep understanding of software integrations, significantly cutting down our daily operational friction.",
+        "rating": 4.5,
+        "initials": "DAE",
+        "anonymous": True,
+    },
+    {
+        "name": "Anonymous",
+        "role": "Product Manager",
+        "company": "Private",
+        "quote": "The perfect cross-functional collaborator for systems optimization. Their unique blend of analytical data parsing and automated process mapping completely revitalized our operational efficiency models.",
+        "rating": 3.5,
+        "initials": "PM",
+        "anonymous": True,
+    },
+]
+
+faqs = [
+    {
+        "question": "What is your primary technical stack?",
+        "answer": "I specialize in Python (its libraries and frameworks), Excel, Power BI, SQL, and automation & integration tools. For web apps and dashboards, I frequently use Streamlit, Plotly, and Flask.",
+    },
+    {
+        "question": "Are you open to contract or full-time remote opportunities?",
+        "answer": "Yes, I am fully equipped for full-time, remote, hybrid, and on-site roles, as well as project-based consultancies.",
+    },
+    {
+        "question": "How do you handle data privacy and security?",
+        "answer": "When building dashboards (like the HRM Executive Dashboard), I ensure PII is masked by default. Access to sensitive data requires authentication, and I always follow the principle of least privilege when connecting to production databases.",
+    },
+    {
+        "question": "Do you only build dashboards, or do you also handle backend data pipelines?",
+        "answer": "Both. I build the entire pipeline: from writing Python scripts to extract and clean raw data (ETL), to automating the workflows using Airflow or GitHub Actions, to building the final visualization layer in Streamlit or Power BI.",
+    }
+]
 
 # ── Context: request URL + root available in every template ─────────
 @app.context_processor
