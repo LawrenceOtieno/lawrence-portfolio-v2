@@ -7,7 +7,7 @@ from datetime import date
 from dotenv import load_dotenv
 load_dotenv()
 
-from flask import Flask, render_template, request, jsonify, Response, url_for
+from flask import Flask, render_template, request, jsonify, Response, url_for, send_from_directory
 
 app = Flask(__name__)
 
@@ -184,6 +184,10 @@ def index():
     return render_template("index.html", projects=projects,
                            case_studies=case_studies,
                            testimonials=testimonials, faqs=faqs)
+
+@app.route("/googlefdf100a20e9b9414.html")
+def google_verification():
+    return send_from_directory("static", "googlefdf100a20e9b9414.html")
 
 @app.route("/case-study/hrm-dashboard")
 def case_study_hrm():
