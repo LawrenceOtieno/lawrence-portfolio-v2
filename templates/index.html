@@ -3,149 +3,117 @@
 {% block content %}
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     HERO
+     HERO (Already dark, no changes needed)
      ═══════════════════════════════════════════════════════════════════ -->
 <section class="relative overflow-hidden bg-teal-900 text-paper-50">
-
-  <!-- Soft radial glow top-right (decorative, aria-hidden) -->
   <div aria-hidden="true"
-       class="absolute -top-40 -right-40 w-[32rem] h-[32rem] rounded-full
-              bg-teal-500/20 blur-3xl pointer-events-none"></div>
+       class="absolute -top-40 -right-40 w-[32rem] h-[32rem] rounded-full bg-teal-500/20 blur-3xl pointer-events-none"></div>
 
-  <!-- Hero content -->
   <div class="relative max-w-shell mx-auto px-6 pt-24 pb-20 text-center">
-
-    <!-- Availability pill -->
-    <p class="inline-flex items-center gap-2 bg-white/5 border border-white/10
-              text-teal-300 text-xs font-semibold uppercase tracking-[.2em]
-              px-4 py-2 rounded-full mb-8">
+    <p class="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-teal-300 text-xs font-semibold uppercase tracking-[.2em] px-4 py-2 rounded-full mb-8">
       <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
       Flexible Across Remote, Hybrid &amp; On-Site Roles
     </p>
 
-    <!-- Headline -->
-    <h1 class="font-display font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight
-               max-w-5xl mx-auto text-paper-50 text-balance">
+    <h1 class="font-display font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-5xl mx-auto text-paper-50 text-balance">
       Bridging the gap:
       <span class="block text-orange-500 mt-2 text-balance">People. Processes. Systems.</span>
     </h1>
 
-    <!-- Sub-paragraph -->
     <p class="text-paper-100/70 max-w-2xl mx-auto mt-8 text-base md:text-lg leading-relaxed">
       I’m Lawrence Otieno, a Technical Business Analyst &amp; ETL Data Engineer. I analyze business needs and build data products, systems, and ETL pipelines that solve real business and IT problems.
       <span class="text-teal-300 font-medium">Python · SQL · Excel · Flask · and more.</span>
     </p>
 
-    <!-- CTAs -->
     <div class="flex flex-wrap justify-center gap-3 mt-10">
-      <a href="#work"
-         class="bg-orange-500 hover:bg-orange-700 text-white font-semibold
-                px-7 py-3 rounded-full transition-colors">
+      <a href="#work" class="bg-orange-500 hover:bg-orange-700 text-white font-semibold px-7 py-3 rounded-full transition-colors">
         See my work
       </a>
-      <a href="{{ url_for('static', filename='files/Lawrence_Otieno_Resume.pdf') }}" target="_blank" rel="noopener noreferrer"
-         class="border border-white/25 hover:border-white/50 hover:bg-white/5
-                text-paper-50 font-semibold px-7 py-3 rounded-full transition-colors">
+      <a href="{{ url_for('static', filename='files/Lawrence_Otieno_Resume.pdf') }}" target="_blank" rel="noopener noreferrer" class="border border-white/25 hover:border-white/50 hover:bg-white/5 text-paper-50 font-semibold px-7 py-3 rounded-full transition-colors">
         View resume
       </a>
     </div>
   </div>
 
-  <!-- ── Animated trust ticker ──────── -->
   <div class="border-t border-white/10 bg-teal-900/70">
     <div class="overflow-hidden py-3">
-      <div id="trust-ticker"
-           class="flex gap-12 whitespace-nowrap animate-marquee
-                  text-sm text-teal-300/80 font-medium w-max">
-        <span>Python · SQL · Pandas · NumPy</span>
-        <span class="text-orange-500">•</span>
-        <span>Power BI · Looker · Excel</span>
-        <span class="text-orange-500">•</span>
-        <span>Streamlit · Plotly · Flask</span>
-        <span class="text-orange-500">•</span>
-        <span>Airflow · Spark · APIs</span>
-        <span class="text-orange-500">•</span>
-        <span>ServiceNow · Jira · Confluence</span>
-        <span class="text-orange-500">•</span>
-        <span>Agile · Scrum · CBAP (in progress)</span>
-        <span class="text-orange-500">•</span>
+      <div id="trust-ticker" class="flex gap-12 whitespace-nowrap animate-marquee text-sm text-teal-300/80 font-medium w-max">
+        <span>Python · SQL · Pandas · NumPy</span><span class="text-orange-500">•</span>
+        <span>Power BI · Looker · Excel</span><span class="text-orange-500">•</span>
+        <span>Streamlit · Plotly · Flask</span><span class="text-orange-500">•</span>
+        <span>Airflow · Spark · APIs</span><span class="text-orange-500">•</span>
+        <span>ServiceNow · Jira · Confluence</span><span class="text-orange-500">•</span>
+        <span>Agile · Scrum · CBAP (in progress)</span><span class="text-orange-500">•</span>
       </div>
     </div>
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════════════════════════
-     APPROACH SECTION (Updated text & ID)
+     APPROACH SECTION
      ═══════════════════════════════════════════════════════════════════ -->
-<section id="approach" class="max-w-shell mx-auto px-6 py-20">
+<section id="approach" class="max-w-shell mx-auto px-6 py-20 dark:text-paper-50 transition-colors duration-300">
   <div class="text-center mb-14">
-    <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">
       How I work
     </h2>
-    <p class="text-ink-500 mt-3 max-w-xl mx-auto">
+    <p class="text-ink-500 dark:text-paper-100/70 mt-3 max-w-xl mx-auto">
       Four principles that guide how I bridge the gap between business needs and technical execution.
     </p>
   </div>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <article class="bg-white rounded-card border border-line shadow-card p-6 hover:shadow-lift transition-shadow">
-      <div class="w-11 h-11 rounded-lg bg-teal-500/10 text-teal-700 grid place-items-center text-xl mb-4">◈</div>
-      <h3 class="font-display font-semibold text-ink-900 mb-2">Requirement clarity</h3>
-      <p class="text-sm text-ink-500 leading-relaxed">I translate ambiguous business needs into structured, testable requirements before a single line of code is written.</p>
+    <article class="bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300">
+      <div class="w-11 h-11 rounded-lg bg-teal-500/10 dark:bg-teal-500/20 text-teal-700 dark:text-teal-300 grid place-items-center text-xl mb-4">◈</div>
+      <h3 class="font-display font-semibold text-ink-900 dark:text-white mb-2">Requirement clarity</h3>
+      <p class="text-sm text-ink-500 dark:text-paper-100/70 leading-relaxed">I translate ambiguous business needs into structured, testable requirements before a single line of code is written.</p>
     </article>
 
-    <article class="bg-white rounded-card border border-line shadow-card p-6 hover:shadow-lift transition-shadow">
-      <div class="w-11 h-11 rounded-lg bg-orange-500/10 text-orange-700 grid place-items-center text-xl mb-4">⚡</div>
-      <h3 class="font-display font-semibold text-ink-900 mb-2">Automation-first</h3>
-      <p class="text-sm text-ink-500 leading-relaxed">I automate repetitive workflows to eliminate manual overhead. In operations, repetition is a bug, not a feature.</p>
+    <article class="bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300">
+      <div class="w-11 h-11 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-orange-700 dark:text-orange-500 grid place-items-center text-xl mb-4">⚡</div>
+      <h3 class="font-display font-semibold text-ink-900 dark:text-white mb-2">Automation-first</h3>
+      <p class="text-sm text-ink-500 dark:text-paper-100/70 leading-relaxed">I automate repetitive workflows to eliminate manual overhead. In operations, repetition is a bug, not a feature.</p>
     </article>
 
-    <article class="bg-white rounded-card border border-line shadow-card p-6 hover:shadow-lift transition-shadow">
-      <div class="w-11 h-11 rounded-lg bg-teal-500/10 text-teal-700 grid place-items-center text-xl mb-4">⌘</div>
-      <h3 class="font-display font-semibold text-ink-900 mb-2">Documented end-to-end</h3>
-      <p class="text-sm text-ink-500 leading-relaxed">SOPs, runbooks, and KPI definitions anyone can follow, so the work survives without me in the room.</p>
+    <article class="bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300">
+      <div class="w-11 h-11 rounded-lg bg-teal-500/10 dark:bg-teal-500/20 text-teal-700 dark:text-teal-300 grid place-items-center text-xl mb-4">⌘</div>
+      <h3 class="font-display font-semibold text-ink-900 dark:text-white mb-2">Documented end-to-end</h3>
+      <p class="text-sm text-ink-500 dark:text-paper-100/70 leading-relaxed">SOPs, runbooks, and KPI definitions anyone can follow, so the work survives without me in the room.</p>
     </article>
 
-    <article class="bg-white rounded-card border border-line shadow-card p-6 hover:shadow-lift transition-shadow">
-      <div class="w-11 h-11 rounded-lg bg-orange-500/10 text-orange-700 grid place-items-center text-xl mb-4">◎</div>
-      <h3 class="font-display font-semibold text-ink-900 mb-2">Tested, not assumed</h3>
-      <p class="text-sm text-ink-500 leading-relaxed">I rigorously verify fixes before shipping, moving beyond 'probably works' to proven reliability. Every ETL pipeline, system, and data product I deliver provides metrics you can trust.</p>
+    <article class="bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300">
+      <div class="w-11 h-11 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-orange-700 dark:text-orange-500 grid place-items-center text-xl mb-4">◎</div>
+      <h3 class="font-display font-semibold text-ink-900 dark:text-white mb-2">Tested, not assumed</h3>
+      <p class="text-sm text-ink-500 dark:text-paper-100/70 leading-relaxed">I rigorously verify fixes before shipping, moving beyond 'probably works' to proven reliability. Every ETL pipeline, system, and data product I deliver provides metrics you can trust.</p>
     </article>
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════════════════════════
      ABOUT SECTION
      ═══════════════════════════════════════════════════════════════════ -->
-<section id="about" class="bg-white border-y border-line py-24">
+<section id="about" class="bg-white dark:bg-[#051820] border-y border-line dark:border-white/10 py-24 transition-colors duration-300">
   <div class="max-w-shell mx-auto px-6">
-    
     <div class="text-center mb-20">
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900">
-        My Journey
-      </h2>
-      <p class="text-ink-500 mt-4 max-w-xl mx-auto text-lg">
-        How I bridge the gap between business needs, data architecture, and technical execution.
-      </p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">My Journey</h2>
+      <p class="text-ink-500 dark:text-paper-100/70 mt-4 max-w-xl mx-auto text-lg">How I bridge the gap between business needs, data architecture, and technical execution.</p>
     </div>
 
     <div class="relative max-w-4xl mx-auto">
-      <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-line -translate-x-1/2" aria-hidden="true"></div>
+      <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-line dark:bg-white/10 -translate-x-1/2" aria-hidden="true"></div>
 
       <!-- Item 1 -->
       <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 md:mb-24 group">
         <div class="w-full md:w-[45%] mb-8 md:mb-0 md:text-right pr-0 md:pr-8">
           <span class="text-orange-500 font-bold text-sm tracking-widest uppercase mb-2 block">Foundations</span>
-          <h3 class="font-display text-2xl font-bold text-teal-900 mb-4">Bridging Business &amp; Tech</h3>
-          <p class="text-ink-500 leading-relaxed">My journey began with a deep-seated fascination with how technology impacts day-to-day operational efficiency. Pursuing a degree in Business Information Technology allowed me to establish a robust framework for alignment between systems architecture and organizational needs.</p>
+          <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-4">Bridging Business &amp; Tech</h3>
+          <p class="text-ink-500 dark:text-paper-100/70 leading-relaxed">My journey began with a deep-seated fascination with how technology impacts day-to-day operational efficiency. Pursuing a degree in Business Information Technology allowed me to establish a robust framework for alignment between systems architecture and organizational needs.</p>
         </div>
-        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white border-4 border-teal-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
+        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white dark:bg-[#051820] border-4 border-teal-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
           <div class="w-2 h-2 rounded-full bg-teal-500"></div>
         </div>
         <div class="w-full md:w-[45%] pl-0 md:pl-8 flex justify-center md:justify-start">
-          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-card bg-paper-100">
+          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-white/10 shadow-card bg-paper-100 dark:bg-white/5">
             <img src="{{ url_for('static', filename='images/about/about-img-1.jpg') }}" alt="Foundations" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
           </div>
         </div>
@@ -155,14 +123,14 @@
       <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-16 md:mb-24 group">
         <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-0 md:pl-8">
           <span class="text-teal-500 font-bold text-sm tracking-widest uppercase mb-2 block">Core Expertise</span>
-          <h3 class="font-display text-2xl font-bold text-teal-900 mb-4">Infrastructure &amp; Operations</h3>
-          <p class="text-ink-500 leading-relaxed">Building upon my academic foundation, I spent several years specializing in ICT support and systems administration. Managing networks, utilizing tools like Jira and ServiceNow, and deploying infrastructure allowed me to sharpen my approach to process optimization and problem-solving.</p>
+          <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-4">Infrastructure &amp; Operations</h3>
+          <p class="text-ink-500 dark:text-paper-100/70 leading-relaxed">Building upon my academic foundation, I spent several years specializing in ICT support and systems administration. Managing networks, utilizing tools like Jira and ServiceNow, and deploying infrastructure allowed me to sharpen my approach to process optimization and problem-solving.</p>
         </div>
-        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white border-4 border-orange-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
+        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white dark:bg-[#051820] border-4 border-orange-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
           <div class="w-2 h-2 rounded-full bg-orange-500"></div>
         </div>
         <div class="w-full md:w-[45%] pr-0 md:pr-8 flex justify-center md:justify-end">
-          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-card bg-paper-100">
+          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-white/10 shadow-card bg-paper-100 dark:bg-white/5">
             <img src="{{ url_for('static', filename='images/about/about-img-2.jpg') }}" alt="Core Expertise" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
           </div>
         </div>
@@ -172,14 +140,14 @@
       <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 md:mb-24 group">
         <div class="w-full md:w-[45%] mb-8 md:mb-0 md:text-right pr-0 md:pr-8">
           <span class="text-orange-500 font-bold text-sm tracking-widest uppercase mb-2 block">Evolution</span>
-          <h3 class="font-display text-2xl font-bold text-teal-900 mb-4">Data Analytics &amp; Automation</h3>
-          <p class="text-ink-500 leading-relaxed">To drive deeper value, my focus evolved toward transforming raw logs into structural insights. By integrating Python, SQL, and Excel workflows into analytics and pipeline development, I focus on automating repeatable data processes and mapping out complex business requirements.</p>
+          <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-4">Data Analytics &amp; Automation</h3>
+          <p class="text-ink-500 dark:text-paper-100/70 leading-relaxed">To drive deeper value, my focus evolved toward transforming raw logs into structural insights. By integrating Python, SQL, and Excel workflows into analytics and pipeline development, I focus on automating repeatable data processes and mapping out complex business requirements.</p>
         </div>
-        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white border-4 border-teal-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
+        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white dark:bg-[#051820] border-4 border-teal-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
           <div class="w-2 h-2 rounded-full bg-teal-500"></div>
         </div>
         <div class="w-full md:w-[45%] pl-0 md:pl-8 flex justify-center md:justify-start">
-          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-card bg-paper-100">
+          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-white/10 shadow-card bg-paper-100 dark:bg-white/5">
             <img src="{{ url_for('static', filename='images/about/about-img-3.jpg') }}" alt="Evolution" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
           </div>
         </div>
@@ -189,148 +157,96 @@
       <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group">
         <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-0 md:pl-8">
           <span class="text-teal-500 font-bold text-sm tracking-widest uppercase mb-2 block">Vision</span>
-          <h3 class="font-display text-2xl font-bold text-teal-900 mb-4">Continuous Excellence</h3>
-          <p class="text-ink-500 leading-relaxed">I am dedicated to tackling engineering challenges where technology scales seamlessly. Whether building efficient data workflows, setting up system integrations, or generating reproducible documentation, my goal is to deliver impactful, data-driven solutions.</p>
+          <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-4">Continuous Excellence</h3>
+          <p class="text-ink-500 dark:text-paper-100/70 leading-relaxed">I am dedicated to tackling engineering challenges where technology scales seamlessly. Whether building efficient data workflows, setting up system integrations, or generating reproducible documentation, my goal is to deliver impactful, data-driven solutions.</p>
         </div>
-        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white border-4 border-orange-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
+        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white dark:bg-[#051820] border-4 border-orange-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
           <div class="w-2 h-2 rounded-full bg-orange-500"></div>
         </div>
         <div class="w-full md:w-[45%] pr-0 md:pr-8 flex justify-center md:justify-end">
-          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-card bg-paper-100">
+          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-white/10 shadow-card bg-paper-100 dark:bg-white/5">
             <img src="{{ url_for('static', filename='images/about/about-img-4.jpg') }}" alt="Vision" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════════════════════════
      PORTFOLIO (WORK) SECTION
      ═══════════════════════════════════════════════════════════════════ -->
-<section id="work" class="bg-paper-50 py-24 overflow-hidden">
+<section id="work" class="bg-paper-50 dark:bg-[#051820] py-24 overflow-hidden transition-colors duration-300">
   <div class="max-w-shell mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
     <div>
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900">
-        Selected Work
-      </h2>
-      <p class="text-ink-500 mt-3 max-w-lg">
-        Real-world data applications, automation pipelines, and analytics dashboards.
-      </p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">Selected Work</h2>
+      <p class="text-ink-500 dark:text-paper-100/70 mt-3 max-w-lg">Real-world data applications, automation pipelines, and analytics dashboards.</p>
     </div>
-    <p class="hidden md:flex text-sm text-ink-500 items-center gap-2">
-      Swipe or scroll horizontally <span aria-hidden="true">→</span>
-    </p>
+    <p class="hidden md:flex text-sm text-ink-500 dark:text-paper-100/70 items-center gap-2">Swipe or scroll horizontally <span aria-hidden="true">→</span></p>
   </div>
 
   <div class="relative max-w-shell mx-auto">
     <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-6 pb-8 scrollbar-hide" style="scroll-padding-left: 1.5rem;">
-      
       {% for project in projects %}
       <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" 
-         class="snap-start shrink-0 w-[85vw] md:w-[380px] group bg-white rounded-2xl border border-line overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-1 transition-all duration-300 flex flex-col">
-        
-        <!-- Project Image (Placeholder gradient for now) -->
+         class="snap-start shrink-0 w-[85vw] md:w-[380px] group bg-white dark:bg-[#0B3B3C] rounded-2xl border border-line dark:border-white/10 overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-1 transition-all duration-300 flex flex-col">
         <div class="relative aspect-[16/10] overflow-hidden bg-teal-900">
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(242,138,28,0.15),transparent_50%)]"></div>
-          
           <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-100 transition-opacity duration-300">
-            <span class="font-display font-bold text-2xl text-white px-6 text-center leading-tight">
-              {{ project.name }}
-            </span>
+            <span class="font-display font-bold text-2xl text-white px-6 text-center leading-tight">{{ project.name }}</span>
           </div>
-          
           <div class="absolute inset-0 bg-teal-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="bg-orange-500 text-white font-semibold px-6 py-2 rounded-full text-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-              View Project
-            </span>
+            <span class="bg-orange-500 text-white font-semibold px-6 py-2 rounded-full text-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Project</span>
           </div>
         </div>
-
-        <!-- Card Body -->
         <div class="p-6 flex flex-col flex-grow">
-          <h3 class="font-display font-bold text-xl text-teal-900 mb-3 group-hover:text-orange-500 transition-colors">
-            {{ project.name }}
-          </h3>
+          <h3 class="font-display font-bold text-xl text-teal-900 dark:text-white mb-3 group-hover:text-orange-500 transition-colors">{{ project.name }}</h3>
           <div class="flex flex-wrap gap-2 mt-auto">
             {% for tag in project.tags %}
-            <span class="bg-paper-100 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full border border-line">
-              {{ tag }}
-            </span>
+            <span class="bg-paper-100 dark:bg-white/10 text-teal-700 dark:text-teal-300 text-xs font-semibold px-3 py-1 rounded-full border border-line dark:border-white/10">{{ tag }}</span>
             {% endfor %}
           </div>
         </div>
       </a>
       {% endfor %}
-      
       <div class="shrink-0 w-6 md:w-12"></div>
     </div>
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════════════════════════
      CASE STUDIES SECTION
      ═══════════════════════════════════════════════════════════════════ -->
-<section id="case-studies" class="bg-white border-y border-line py-24">
+<section id="case-studies" class="bg-white dark:bg-[#051820] border-y border-line dark:border-white/10 py-24 transition-colors duration-300">
   <div class="max-w-shell mx-auto px-6">
-    
     <div class="text-center mb-16">
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900">
-        Case Studies
-      </h2>
-      <p class="text-ink-500 mt-4 max-w-xl mx-auto text-lg">
-        Deep dives into how I uncover user needs and build impactful data products.
-      </p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">Case Studies</h2>
+      <p class="text-ink-500 dark:text-paper-100/70 mt-4 max-w-xl mx-auto text-lg">Deep dives into how I uncover user needs and build impactful data products.</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-8">
       {% for cs in case_studies %}
-      <div class="bg-white rounded-2xl border border-line shadow-card hover:shadow-lift hover:-translate-y-1 transition-all duration-300 overflow-hidden group flex flex-col">
-        
-        <!-- Cover Image -->
+      <div class="bg-white dark:bg-[#0B3B3C] rounded-2xl border border-line dark:border-white/10 shadow-card hover:shadow-lift hover:-translate-y-1 transition-all duration-300 overflow-hidden group flex flex-col">
         <a href="{{ cs.view_url }}" class="relative aspect-[16/9] overflow-hidden bg-teal-900 block">
-          <!-- Fallback pattern if image is missing -->
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(242,138,28,0.15),transparent_50%)] z-0"></div>
-          
-          <img src="{{ url_for('static', filename=cs.image) }}" 
-               alt="{{ cs.title }}" 
-               class="relative z-10 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-               onerror="this.style.opacity='0';" />
-               
+          <img src="{{ url_for('static', filename=cs.image) }}" alt="{{ cs.title }}" class="relative z-10 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.opacity='0';" />
           <div class="absolute inset-0 z-20 bg-teal-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="bg-orange-500 text-white font-semibold px-6 py-2 rounded-full text-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-              Read Case Study
-            </span>
+            <span class="bg-orange-500 text-white font-semibold px-6 py-2 rounded-full text-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Read Case Study</span>
           </div>
         </a>
-
-        <!-- Content -->
         <div class="p-8 flex flex-col flex-grow">
           <div class="flex flex-wrap gap-2 mb-4">
             {% for tag in cs.tags %}
-            <span class="bg-paper-50 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full border border-line">
-              {{ tag }}
-            </span>
+            <span class="bg-paper-50 dark:bg-white/5 text-teal-700 dark:text-teal-300 text-xs font-semibold px-3 py-1 rounded-full border border-line dark:border-white/10">{{ tag }}</span>
             {% endfor %}
           </div>
-          
-          <h3 class="font-display text-2xl font-bold text-teal-900 mb-3 group-hover:text-orange-500 transition-colors">
+          <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-3 group-hover:text-orange-500 transition-colors">
             <a href="{{ cs.view_url }}">{{ cs.title }}</a>
           </h3>
-          
-          <p class="text-ink-500 text-sm leading-relaxed mb-8 flex-grow">
-            {{ cs.summary }}
-          </p>
-
-          <!-- Buttons -->
+          <p class="text-ink-500 dark:text-paper-100/70 text-sm leading-relaxed mb-8 flex-grow">{{ cs.summary }}</p>
           <div class="flex flex-wrap items-center gap-4 mt-auto">
-            <a href="{{ cs.view_url }}" class="bg-teal-900 hover:bg-teal-700 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors">
-              View Case Study
-            </a>
-            <a href="{{ url_for('static', filename=cs.pdf_file) }}" download class="text-teal-700 hover:text-orange-500 text-sm font-semibold flex items-center gap-2 transition-colors">
+            <a href="{{ cs.view_url }}" class="bg-teal-900 hover:bg-teal-700 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors">View Case Study</a>
+            <a href="{{ url_for('static', filename=cs.pdf_file) }}" download class="text-teal-700 dark:text-teal-300 hover:text-orange-500 text-sm font-semibold flex items-center gap-2 transition-colors">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
               Download PDF
             </a>
@@ -339,57 +255,35 @@
       </div>
       {% endfor %}
     </div>
-
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════════════════════════
-     TESTIMONIALS SECTION
+     TESTIMONIALS SECTION (Already dark)
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="testimonials" class="bg-teal-900 py-24 overflow-hidden text-paper-50">
   <div class="max-w-shell mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
     <div>
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-white">
-        What people say
-      </h2>
-      <p class="text-teal-300 mt-3 max-w-lg">
-        Feedback from colleagues, clients, and technical collaborators.
-      </p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-white">What people say</h2>
+      <p class="text-teal-300 mt-3 max-w-lg">Feedback from colleagues, clients, and technical collaborators.</p>
     </div>
-    <p class="hidden md:flex text-sm text-teal-300/70 items-center gap-2">
-      Swipe or scroll horizontally <span aria-hidden="true">→</span>
-    </p>
+    <p class="hidden md:flex text-sm text-teal-300/70 items-center gap-2">Swipe or scroll horizontally <span aria-hidden="true">→</span></p>
   </div>
 
   <div class="relative max-w-shell mx-auto">
     <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-6 pb-8 scrollbar-hide" style="scroll-padding-left: 1.5rem;">
-      
       {% for t in testimonials %}
       <div class="snap-start shrink-0 w-[85vw] md:w-[380px] bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col backdrop-blur-sm">
-        
-        <!-- Stars -->
         <div class="flex gap-1 text-orange-500 mb-6">
           {% for i in range(1, 6) %}
-            {% if t.rating >= i %}
-              <span>★</span>
-            {% elif t.rating >= i - 0.5 %}
-              <span class="opacity-50">★</span>
-            {% else %}
-              <span class="text-white/20">★</span>
-            {% endif %}
+            {% if t.rating >= i %}<span>★</span>
+            {% elif t.rating >= i - 0.5 %}<span class="opacity-50">★</span>
+            {% else %}<span class="text-white/20">★</span>{% endif %}
           {% endfor %}
           <span class="text-white/40 text-sm ml-2 mt-0.5 font-medium">{{ t.rating }}.0</span>
         </div>
-
-        <!-- Quote -->
-        <p class="text-white/80 text-sm leading-relaxed flex-grow mb-8 italic">
-          "{{ t.quote }}"
-        </p>
-
-        <!-- Person -->
+        <p class="text-white/80 text-sm leading-relaxed flex-grow mb-8 italic">"{{ t.quote }}"</p>
         <div class="flex items-center gap-4 mt-auto">
-          <!-- Avatar -->
           <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20 flex-shrink-0 bg-teal-700 flex items-center justify-center">
             {% if t.anonymous %}
               <span class="font-display font-bold text-teal-200 text-sm">{{ t.initials }}</span>
@@ -397,8 +291,6 @@
               <img src="{{ url_for('static', filename=t.photo) }}" alt="{{ t.name }}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-display font-bold text-teal-200 text-lg\'>{{ t.name[0] }}</span>';"/>
             {% endif %}
           </div>
-          
-          <!-- Name & Role -->
           <div>
             <h4 class="font-display font-semibold text-white">{{ t.name }}</h4>
             <p class="text-teal-300 text-xs">{{ t.role }}{% if t.company %}, {{ t.company }}{% endif %}</p>
@@ -406,117 +298,82 @@
         </div>
       </div>
       {% endfor %}
-
       <div class="shrink-0 w-6 md:w-12"></div>
     </div>
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════════════════════════
      FAQ SECTION
      ═══════════════════════════════════════════════════════════════════ -->
-<section id="faq" class="bg-white py-24 border-b border-line">
+<section id="faq" class="bg-white dark:bg-[#051820] py-24 border-b border-line dark:border-white/10 transition-colors duration-300">
   <div class="max-w-3xl mx-auto px-6">
-    
     <div class="text-center mb-14">
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900">
-        Frequently Asked Questions
-      </h2>
-      <p class="text-ink-500 mt-4">
-        A few things hiring managers often want to know before reaching out.
-      </p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">Frequently Asked Questions</h2>
+      <p class="text-ink-500 dark:text-paper-100/70 mt-4">A few things hiring managers often want to know before reaching out.</p>
     </div>
 
     <div class="space-y-4">
       {% for faq in faqs %}
-      <!-- Using native <details> and <summary> for accessible, JS-free accordion -->
-      <details class="group bg-paper-50 rounded-2xl border border-line overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-        <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-semibold text-teal-900 hover:text-orange-500 transition-colors">
+      <details class="group bg-paper-50 dark:bg-[#0B3B3C] rounded-2xl border border-line dark:border-white/10 overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-colors duration-300">
+        <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-semibold text-teal-900 dark:text-white hover:text-orange-500 transition-colors">
           <span>{{ faq.question }}</span>
           <span class="text-orange-500 transition-transform duration-300 group-open:rotate-45">
             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
           </span>
         </summary>
-        <div class="px-6 pb-6 text-ink-500 text-sm leading-relaxed border-t border-line/50 pt-4 mt-2">
+        <div class="px-6 pb-6 text-ink-500 dark:text-paper-100/70 text-sm leading-relaxed border-t border-line/50 dark:border-white/10 pt-4 mt-2">
           {{ faq.answer }}
         </div>
       </details>
       {% endfor %}
     </div>
-
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════════════════════════
-     CONTACT SECTION
+     CONTACT SECTION (Already dark)
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="contact" class="bg-teal-900 py-24 text-paper-50 relative overflow-hidden">
-  
-  <!-- Subtle background decoration -->
   <div aria-hidden="true" class="absolute -bottom-40 -left-40 w-[32rem] h-[32rem] rounded-full bg-teal-500/10 blur-3xl pointer-events-none"></div>
 
   <div class="relative max-w-3xl mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-white">
-        Ready for the right challenge
-      </h2>
-      <p class="text-teal-300 mt-4 text-lg">
-        Interested in working with me? Fill out the form and I will get back to you as soon as possible.
-      </p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Ready for the right challenge</h2>
+      <p class="text-teal-300 mt-4 text-lg">Interested in working with me? Fill out the form and I will get back to you as soon as possible.</p>
     </div>
 
-    <!-- Form -->
     <form id="contact-form" novalidate class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
         <div>
           <label for="name" class="block text-sm font-semibold text-teal-300 mb-2">Name *</label>
-          <input type="text" id="name" name="name" required
-                 class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:bg-white/10 transition-colors"
-                 placeholder="Jane Doe" />
+          <input type="text" id="name" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:bg-white/10 transition-colors" placeholder="Jane Doe" />
         </div>
-        
         <div>
           <label for="email" class="block text-sm font-semibold text-teal-300 mb-2">Email *</label>
-          <input type="email" id="email" name="email" required
-                 class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:bg-white/10 transition-colors"
-                 placeholder="jane@example.com" />
+          <input type="email" id="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:bg-white/10 transition-colors" placeholder="jane@example.com" />
         </div>
       </div>
-
       <div>
         <label for="phone" class="block text-sm font-semibold text-teal-300 mb-2">Phone (Optional)</label>
-        <input type="tel" id="phone" name="phone"
-               class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:bg-white/10 transition-colors"
-               placeholder="+254 700 000 000" />
+        <input type="tel" id="phone" name="phone" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:bg-white/10 transition-colors" placeholder="+254 700 000 000" />
       </div>
-
       <div>
         <label for="message" class="block text-sm font-semibold text-teal-300 mb-2">Message *</label>
-        <textarea id="message" name="message" rows="4" required
-                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:bg-white/10 transition-colors resize-none"
-                  placeholder="Tell me a bit about what you're looking for..."></textarea>
+        <textarea id="message" name="message" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:bg-white/10 transition-colors resize-none" placeholder="Tell me a bit about what you're looking for..."></textarea>
       </div>
-
       <div class="text-center pt-4">
-        <button type="submit" id="send-btn"
-                class="bg-orange-500 hover:bg-orange-700 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 disabled:opacity-50 disabled:cursor-not-allowed">
+        <button type="submit" id="send-btn" class="bg-orange-500 hover:bg-orange-700 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 disabled:opacity-50 disabled:cursor-not-allowed">
           Send Message
         </button>
       </div>
     </form>
   </div>
 
-  <!-- Custom Toast Notification -->
-  <div id="contact-toast" class="fixed bottom-6 right-6 z-[100] transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
-    <!-- Content injected via JS -->
-  </div>
+  <div id="contact-toast" class="fixed bottom-6 right-6 z-[100] transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none"></div>
 </section>
 
 {% endblock %}
-
 
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/ticker.js') }}?v=1" defer></script>

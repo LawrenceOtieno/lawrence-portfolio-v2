@@ -27,6 +27,12 @@
   font-weight: 500; font-style: normal; font-display: swap;
 }
 
+/* Base Dark Mode Background */
+.dark body {
+  background-color: #051820;
+  color: #EBF1F3;
+}
+
 @layer utilities {
   .scrollbar-hide {
     -ms-overflow-style: none;
