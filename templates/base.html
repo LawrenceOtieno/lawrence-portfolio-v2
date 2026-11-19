@@ -65,12 +65,14 @@
 
 <body class="bg-paper-50 text-ink-900 font-body antialiased">
 
+  <!-- HEADER (Navbar) -->
   <header class="sticky top-0 z-50 bg-paper-50/90 backdrop-blur border-b border-line">
     <nav class="max-w-shell mx-auto flex items-center justify-between px-6 h-16">
       <a href="{{ url_for('index') }}" class="font-display font-bold text-xl tracking-tight">
         <span class="text-teal-900">Lawrence</span><span class="text-orange-500">.</span>
       </a>
 
+      <!-- Desktop Menu -->
       <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
         <li><a href="#skills"       class="hover:text-teal-500 transition-colors">Skills</a></li>
         <li><a href="#work"         class="hover:text-teal-500 transition-colors">Work</a></li>
@@ -85,6 +87,7 @@
         Reach out →
       </a>
 
+      <!-- Mobile Buttons -->
       <div class="flex items-center gap-2 md:hidden">
         <button id="dark-toggle" aria-label="Toggle dark mode"
                 class="w-9 h-9 rounded-full border border-line grid place-items-center text-ink-900">◐</button>
@@ -92,30 +95,31 @@
                 class="w-9 h-9 rounded-full border border-line grid place-items-center text-ink-900">☰</button>
       </div>
     </nav>
-
-    <div id="mobile-menu"
-         class="fixed inset-0 z-[60] bg-teal-900 text-paper-50 hidden flex-col px-6 py-6 md:hidden">
-      <div class="flex items-center justify-between mb-12">
-        <span class="font-display font-bold text-xl">
-          <span class="text-paper-50">Lawrence</span><span class="text-orange-500">.</span>
-        </span>
-        <button id="menu-close" aria-label="Close menu"
-                class="w-10 h-10 rounded-full border border-paper-50/30 grid place-items-center text-paper-50">✕</button>
-      </div>
-      <ul class="flex flex-col gap-6 text-2xl font-display font-semibold">
-        <li><a href="#skills"       class="mobile-link hover:text-orange-500 transition-colors">Skills</a></li>
-        <li><a href="#work"         class="mobile-link hover:text-orange-500 transition-colors">Work</a></li>
-        <li><a href="#case-studies" class="mobile-link hover:text-orange-500 transition-colors">Case Studies</a></li>
-        <li><a href="#about"        class="mobile-link hover:text-orange-500 transition-colors">About</a></li>
-        <li><a href="#contact"      class="mobile-link hover:text-orange-500 transition-colors">Contact</a></li>
-      </ul>
-      <a href="#contact"
-         class="mobile-link mt-auto bg-orange-500 hover:bg-orange-700 text-white
-                text-center font-semibold py-4 rounded-full transition-colors">
-        Reach out →
-      </a>
-    </div>
   </header>
+
+  <!-- MOBILE MENU OVERLAY (Moved outside the header so it covers the whole screen) -->
+  <div id="mobile-menu"
+       class="fixed inset-0 z-[100] bg-teal-900 text-paper-50 hidden flex-col px-6 py-6 md:hidden">
+    <div class="flex items-center justify-between mb-12">
+      <span class="font-display font-bold text-xl">
+        <span class="text-paper-50">Lawrence</span><span class="text-orange-500">.</span>
+      </span>
+      <button id="menu-close" aria-label="Close menu"
+              class="w-10 h-10 rounded-full border border-paper-50/30 grid place-items-center text-paper-50">✕</button>
+    </div>
+    <ul class="flex flex-col gap-6 text-2xl font-display font-semibold">
+      <li><a href="#skills"       class="mobile-link hover:text-orange-500 transition-colors">Skills</a></li>
+      <li><a href="#work"         class="mobile-link hover:text-orange-500 transition-colors">Work</a></li>
+      <li><a href="#case-studies" class="mobile-link hover:text-orange-500 transition-colors">Case Studies</a></li>
+      <li><a href="#about"        class="mobile-link hover:text-orange-500 transition-colors">About</a></li>
+      <li><a href="#contact"      class="mobile-link hover:text-orange-500 transition-colors">Contact</a></li>
+    </ul>
+    <a href="#contact"
+       class="mobile-link mt-auto bg-orange-500 hover:bg-orange-700 text-white
+              text-center font-semibold py-4 rounded-full transition-colors">
+      Reach out →
+    </a>
+  </div>
 
   <main>
     {% block content %}{% endblock %}
