@@ -174,91 +174,84 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     PORTFOLIO (WORK) SECTION - FULL SCREEN AUTO-CAROUSEL
+     PORTFOLIO (WORK) SECTION - FULL BLEED AUTO-CAROUSEL
      ═══════════════════════════════════════════════════════════════════ -->
-<section id="work" class="bg-paper-50 dark:bg-[#051820] py-24 overflow-hidden transition-colors duration-300">
+<section id="work" class="bg-[#051820] overflow-hidden transition-colors duration-300">
   
-  <div class="max-w-shell mx-auto px-6 mb-8 flex flex-col items-center text-center">
-    <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">Selected Work</h2>
-    <p class="text-ink-500 dark:text-paper-100/70 mt-3 max-w-lg">Real-world data applications, automation pipelines, and analytics dashboards.</p>
-    <p class="text-xs text-ink-500/50 dark:text-paper-100/50 mt-4 uppercase tracking-widest font-semibold">
-      Hover to pause • Auto-advances every 3s
+  <div class="max-w-shell mx-auto px-6 pt-24 pb-12 flex flex-col items-center text-center">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Selected Work</h2>
+    <p class="text-paper-100/70 mt-3 max-w-lg">Real-world data applications, automation pipelines, and analytics dashboards.</p>
+    <p class="text-xs text-paper-100/50 mt-4 uppercase tracking-widest font-semibold">
+      Hover to pause • Auto-advances every 4s
     </p>
   </div>
 
   <!-- Carousel Container -->
-  <div class="relative w-full max-w-7xl mx-auto">
-    <!-- Track -->
-    <div id="work-carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-[7.5vw] md:px-[15vw] pb-12 scrollbar-hide" style="scroll-padding-left: 7.5vw;">
+  <div class="relative w-full">
+    <!-- Track (No gaps, no padding, 100% width) -->
+    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide h-[75vh] md:h-[85vh]">
       
       {% for project in projects %}
+      <!-- Full-bleed slide -->
       <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" 
-         class="carousel-slide snap-center shrink-0 w-[85vw] md:w-[70vw] max-w-[1000px] group bg-white dark:bg-[#0B3B3C] rounded-3xl border border-line dark:border-white/10 overflow-hidden shadow-2xl hover:shadow-lift transition-all duration-300 flex flex-col">
+         class="carousel-slide snap-center shrink-0 w-full h-full relative flex flex-col justify-center items-start p-8 md:p-24 group overflow-hidden">
         
-        <!-- Massive Image Showcase Area -->
-        <div class="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-teal-900">
-          <!-- Creative Gradient Overlays -->
-          <div class="absolute inset-0 bg-gradient-to-t from-teal-900 via-teal-900/40 to-transparent z-10"></div>
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(242,138,28,0.2),transparent_50%)] z-10"></div>
+        <!-- Immersive Background -->
+        <div class="absolute inset-0 bg-teal-900 z-0 transition-transform duration-1000 group-hover:scale-105">
+          <!-- Gradient Overlays for depth -->
+          <div class="absolute inset-0 bg-gradient-to-r from-[#051820] via-[#051820]/60 to-transparent z-10"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#051820] via-transparent to-transparent z-10"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(242,138,28,0.15),transparent_60%)] z-10"></div>
           
-          <!-- Project Name (Fallback since we don't have real images yet) -->
-          <div class="absolute inset-0 flex items-center justify-center z-20 px-12">
-            <span class="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-white text-center leading-tight drop-shadow-2xl">
-              {{ project.name }}
-            </span>
-          </div>
-          
-          <!-- Hover Action -->
-          <div class="absolute inset-0 z-30 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
-            <span class="bg-orange-500 text-white font-semibold px-8 py-3 rounded-full text-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-xl">
-              View Project →
+          <!-- Fallback text acting as background art -->
+          <div class="absolute inset-0 flex items-center justify-end pr-12 md:pr-32 opacity-20 z-10">
+            <span class="font-display font-black text-7xl md:text-9xl text-white text-right leading-none">
+              {{ loop.index }}
             </span>
           </div>
         </div>
 
-        <!-- Card Body -->
-        <div class="p-8 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white dark:bg-[#0B3B3C]">
-          <div>
-            <h3 class="font-display font-bold text-2xl md:text-3xl text-teal-900 dark:text-white mb-2 group-hover:text-orange-500 transition-colors">
-              {{ project.name }}
-            </h3>
-            <p class="text-ink-500 dark:text-paper-100/70 text-sm md:text-base">Data Pipeline · Automation · Analytics</p>
-          </div>
-          <div class="flex flex-wrap gap-2">
+        <!-- Foreground Content (Like the screenshot) -->
+        <div class="relative z-20 max-w-2xl mt-auto md:mb-12">
+          <div class="flex flex-wrap gap-2 mb-6">
             {% for tag in project.tags %}
-            <span class="bg-paper-50 dark:bg-white/10 text-teal-700 dark:text-teal-300 text-sm font-semibold px-4 py-1.5 rounded-full border border-line dark:border-white/10">
+            <span class="bg-white/10 backdrop-blur-md text-white border border-white/20 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">
               {{ tag }}
             </span>
             {% endfor %}
           </div>
+          
+          <h3 class="font-display font-bold text-4xl md:text-6xl text-white mb-4 leading-tight drop-shadow-2xl">
+            {{ project.name }}
+          </h3>
+          
+          <p class="text-white/70 text-lg md:text-xl mb-8 max-w-lg hidden md:block">
+            A tailored data solution built to solve real business and IT problems.
+          </p>
+          
+          <!-- CTA Pill -->
+          <span class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-full text-lg transition-all duration-300 group-hover:translate-x-2 shadow-xl shadow-orange-500/20">
+            View Project 
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </span>
         </div>
       </a>
       {% endfor %}
 
       <!-- Creative End Marker Slide -->
-      <a href="#contact" class="carousel-slide snap-center shrink-0 w-[85vw] md:w-[70vw] max-w-[1000px] group bg-[#0B3B3C] rounded-3xl border border-line dark:border-white/10 overflow-hidden shadow-2xl hover:shadow-lift transition-all duration-300 flex flex-col">
-        <div class="relative flex-grow flex flex-col items-center justify-center overflow-hidden bg-teal-900 p-8 md:p-12 text-center min-h-[300px] md:min-h-[400px]">
-          <!-- Creative Gradient Overlays -->
-          <div class="absolute inset-0 bg-gradient-to-tr from-teal-900 via-teal-900/80 to-[#051820] z-0"></div>
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(242,138,28,0.2),transparent_60%)] z-10"></div>
-          
-          <div class="relative z-20">
-            <h3 class="font-display font-bold text-4xl md:text-6xl text-white mb-6 drop-shadow-xl">
-              That's a wrap.
-            </h3>
-            <p class="text-teal-300 text-lg md:text-xl mb-8 max-w-lg mx-auto">
-              You've seen the work. Ready to write the next chapter together?
-            </p>
-            <span class="inline-block bg-orange-500 text-white font-semibold px-8 py-3 rounded-full text-lg shadow-xl group-hover:scale-105 transition-all duration-300">
-              Let's Talk →
-            </span>
-          </div>
-        </div>
+      <a href="#contact" class="carousel-slide snap-center shrink-0 w-full h-full relative flex flex-col justify-center items-center p-8 md:p-24 bg-[#0B3B3C] group overflow-hidden text-center">
         
-        <!-- Dummy Footer to match height of other cards -->
-        <div class="p-8 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white dark:bg-[#0B3B3C] border-t border-line dark:border-white/10">
-          <p class="text-ink-500 dark:text-paper-100/70 text-sm font-semibold uppercase tracking-widest">End of portfolio</p>
-          <p class="text-ink-500 dark:text-paper-100/70 text-sm">Looking for someone to build your next data product?</p>
+        <!-- Immersive Background -->
+        <div class="absolute inset-0 bg-gradient-to-tr from-teal-900 via-teal-900/80 to-[#051820] z-0"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(242,138,28,0.2),transparent_60%)] z-10"></div>
+        
+        <div class="relative z-20">
+          <h3 class="font-display font-bold text-5xl md:text-8xl text-white mb-6 drop-shadow-2xl">
+            That's a Wrap
+          </h3>
+          <p class="text-teal-300 text-2xl md:text-4xl font-light">
+            More to follow.
+          </p>
         </div>
       </a>
 

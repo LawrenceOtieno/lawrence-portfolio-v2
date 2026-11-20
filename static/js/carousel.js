@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Start the auto-play timer (3 seconds)
+  // Start the auto-play timer (4 seconds)
   const startCarousel = () => {
-    intervalId = setInterval(advanceSlide, 3000);
+    intervalId = setInterval(advanceSlide, 4000);
   };
 
   // Stop the timer (so users can read/click)
