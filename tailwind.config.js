@@ -45,7 +45,6 @@ module.exports = {
       },
       animation: {
         marquee: 'marquee 40s linear infinite',
-        'marquee-work': 'marquee 60s linear infinite',
         'fade-in': 'fadeIn .6s ease both',
       },
       keyframes: {
