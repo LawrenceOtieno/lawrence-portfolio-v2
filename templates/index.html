@@ -178,19 +178,19 @@
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="work" class="bg-[#051820] transition-colors duration-300">
   
-  <!-- Fixed Header (Visible above the carousel) -->
-  <div class="max-w-shell mx-auto px-6 pt-24 pb-10 flex flex-col items-center text-center">
+  <!-- Reduced padding to ensure it stays visible on laptops -->
+  <div class="max-w-shell mx-auto px-6 pt-12 pb-8 flex flex-col items-center text-center">
     <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Selected Work</h2>
-    <p class="text-paper-100/70 mt-3 max-w-lg">Real-world data applications, automation pipelines, and analytics dashboards.</p>
-    <p class="text-xs text-paper-100/50 mt-4 uppercase tracking-widest font-semibold">
+    <p class="text-paper-100/70 mt-2 max-w-lg">Real-world data applications, automation pipelines, and analytics dashboards.</p>
+    <p class="text-xs text-paper-100/50 mt-3 uppercase tracking-widest font-semibold">
       Hover to pause
     </p>
   </div>
 
   <!-- Carousel Container -->
   <div class="relative w-full">
-    <!-- Track (Reduced height so header stays in view) -->
-    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide h-[60vh] md:h-[75vh]">
+    <!-- Track (Reduced desktop height from 75vh to 65vh to fit screen) -->
+    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide h-[60vh] md:h-[65vh]">
       
       {% for project in projects %}
       <!-- Full-bleed slide -->
@@ -205,7 +205,7 @@
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(242,138,28,0.15),transparent_60%)] z-10"></div>
         </div>
 
-        <!-- Foreground Content (Centered properly) -->
+        <!-- Foreground Content -->
         <div class="relative z-20 max-w-2xl w-full">
           <div class="flex flex-wrap gap-2 mb-6">
             {% for tag in project.tags %}
