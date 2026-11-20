@@ -3,7 +3,7 @@
 {% block content %}
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     HERO (Already dark, no changes needed)
+     HERO
      ═══════════════════════════════════════════════════════════════════ -->
 <section class="relative overflow-hidden bg-teal-900 text-paper-50">
   <div aria-hidden="true"
@@ -176,10 +176,10 @@
 <!-- ═══════════════════════════════════════════════════════════════════
      PORTFOLIO (WORK) SECTION - FULL BLEED AUTO-CAROUSEL
      ═══════════════════════════════════════════════════════════════════ -->
-<section id="work" class="bg-[#051820] overflow-hidden transition-colors duration-300">
+<section id="work" class="bg-[#051820] transition-colors duration-300">
   
-  <!-- Fixed Header (No longer part of the carousel scrolling area) -->
-  <div class="max-w-shell mx-auto px-6 pt-24 pb-12 flex flex-col items-center text-center">
+  <!-- Fixed Header (Visible above the carousel) -->
+  <div class="max-w-shell mx-auto px-6 pt-24 pb-10 flex flex-col items-center text-center">
     <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Selected Work</h2>
     <p class="text-paper-100/70 mt-3 max-w-lg">Real-world data applications, automation pipelines, and analytics dashboards.</p>
     <p class="text-xs text-paper-100/50 mt-4 uppercase tracking-widest font-semibold">
@@ -189,24 +189,24 @@
 
   <!-- Carousel Container -->
   <div class="relative w-full">
-    <!-- Track (No gaps, no padding, 100% width) -->
-    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide h-[75vh] md:h-[85vh]">
+    <!-- Track (Reduced height so header stays in view) -->
+    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide h-[60vh] md:h-[75vh]">
       
       {% for project in projects %}
       <!-- Full-bleed slide -->
       <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" 
-         class="carousel-slide snap-center shrink-0 w-full h-full relative flex flex-col justify-center items-start p-8 md:p-24 group overflow-hidden">
+         class="carousel-slide snap-center shrink-0 w-full h-full relative flex flex-col justify-center items-start p-8 md:p-24 group overflow-hidden bg-teal-900">
         
         <!-- Immersive Background -->
-        <div class="absolute inset-0 bg-teal-900 z-0 transition-transform duration-1000 group-hover:scale-105">
+        <div class="absolute inset-0 z-0 transition-transform duration-1000 group-hover:scale-105">
           <!-- Gradient Overlays for depth -->
-          <div class="absolute inset-0 bg-gradient-to-r from-[#051820] via-[#051820]/60 to-transparent z-10"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-[#051820] via-[#051820]/80 to-transparent z-10"></div>
           <div class="absolute inset-0 bg-gradient-to-t from-[#051820] via-transparent to-transparent z-10"></div>
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(242,138,28,0.15),transparent_60%)] z-10"></div>
         </div>
 
-        <!-- Foreground Content (Like the screenshot) -->
-        <div class="relative z-20 max-w-2xl mt-auto md:mb-12">
+        <!-- Foreground Content (Centered properly) -->
+        <div class="relative z-20 max-w-2xl w-full">
           <div class="flex flex-wrap gap-2 mb-6">
             {% for tag in project.tags %}
             <span class="bg-white/10 backdrop-blur-md text-white border border-white/20 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">
@@ -215,16 +215,16 @@
             {% endfor %}
           </div>
           
-          <h3 class="font-display font-bold text-4xl md:text-6xl text-white mb-4 leading-tight drop-shadow-2xl">
+          <h3 class="font-display font-bold text-3xl sm:text-4xl md:text-6xl text-white mb-4 leading-tight drop-shadow-2xl">
             {{ project.name }}
           </h3>
           
-          <p class="text-white/70 text-lg md:text-xl mb-8 max-w-lg hidden md:block">
+          <p class="text-white/70 text-base md:text-xl mb-8 max-w-lg hidden md:block">
             A tailored data solution built to solve real business and IT problems.
           </p>
           
           <!-- CTA Pill -->
-          <span class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-full text-lg transition-all duration-300 group-hover:translate-x-2 shadow-xl shadow-orange-500/20">
+          <span class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-700 text-white font-semibold px-6 py-3 md:px-8 md:py-3 rounded-full text-base md:text-lg transition-all duration-300 group-hover:translate-x-2 shadow-xl shadow-orange-500/20">
             View Project 
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
           </span>
@@ -240,10 +240,10 @@
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(242,138,28,0.2),transparent_60%)] z-10"></div>
         
         <div class="relative z-20">
-          <h3 class="font-display font-bold text-5xl md:text-8xl text-white mb-6 drop-shadow-2xl">
+          <h3 class="font-display font-bold text-4xl sm:text-5xl md:text-8xl text-white mb-6 drop-shadow-2xl">
             That's a Wrap
           </h3>
-          <p class="text-teal-300 text-2xl md:text-4xl font-light">
+          <p class="text-teal-300 text-xl sm:text-2xl md:text-4xl font-light">
             More to follow.
           </p>
         </div>
@@ -298,7 +298,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     TESTIMONIALS SECTION (Already dark)
+     TESTIMONIALS SECTION
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="testimonials" class="bg-teal-900 py-24 overflow-hidden text-paper-50">
   <div class="max-w-shell mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -371,7 +371,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     CONTACT SECTION (Already dark)
+     CONTACT SECTION
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="contact" class="bg-teal-900 py-24 text-paper-50 relative overflow-hidden">
   <div aria-hidden="true" class="absolute -bottom-40 -left-40 w-[32rem] h-[32rem] rounded-full bg-teal-500/10 blur-3xl pointer-events-none"></div>
