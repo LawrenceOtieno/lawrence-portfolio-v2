@@ -8,14 +8,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to advance to the next slide
   const advanceSlide = () => {
-    // Move to next index, loop back to 0 if at the end
-    currentIndex = (currentIndex + 1) % slides.length;
-    
-    const slide = slides[currentIndex];
-    
-    // Scroll the track to center the active slide
+    // If we are on the final slide (the End marker)
+    if (currentIndex === slides.length - 1) {
+      currentIndex = 0;
+      
+      // Temporarily disable scroll snap and smooth scrolling to snap instantly
+      track.style.scrollSnapType = "none";
+      track.style.scrollBehavior = "auto";
+      
+      // Instantly jump to the first slide
+      track.scrollLeft = slides[0].offsetLeft - track.offsetLeft;
+      
+      // Restore scroll snap and smooth scrolling for the next cycles
+      setTimeout(() => {
+        track.style.scrollSnapType = "x mandatory";
+        track.style.scrollBehavior = "smooth";
+      }, 50);
+      return;
+    }
+
+    // Otherwise, move to the next slide smoothly
+    currentIndex++;
     track.scrollTo({
-      left: slide.offsetLeft - track.offsetLeft,
+      left: slides[currentIndex].offsetLeft - track.offsetLeft,
       behavior: "smooth"
     });
   };
