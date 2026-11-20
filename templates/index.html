@@ -178,23 +178,23 @@
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="work" class="bg-[#051820] transition-colors duration-300 scroll-mt-20 pb-12">
   
-  <div class="max-w-shell mx-auto px-6 pt-20 pb-10 flex flex-col items-center text-center">
+  <div class="max-w-shell mx-auto px-6 pt-16 pb-8 flex flex-col items-center text-center">
     <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Selected Work</h2>
     <p class="text-paper-100/70 mt-3 max-w-lg">Real-world data applications, automation pipelines, and analytics dashboards.</p>
-    <p class="text-xs text-paper-100/50 mt-4 uppercase tracking-widest font-semibold">
+    <p class="text-xs text-paper-100/50 mt-3 uppercase tracking-widest font-semibold">
       Hover to pause
     </p>
   </div>
 
   <!-- Carousel Container -->
   <div class="relative w-full">
-    <!-- Track: Height is reduced on laptops to ensure header visibility -->
-    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide min-h-[450px] md:h-[55vh]">
+    <!-- Track: Dynamically calculates exact height on laptops to prevent scrolling/cutoff -->
+    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide min-h-[450px] md:h-[calc(100vh-240px)]">
       
       {% for project in projects %}
-      <!-- Full-bleed slide: Padding and font sizes adjusted for laptop screens -->
+      <!-- Full-bleed slide -->
       <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" 
-         class="carousel-slide snap-center shrink-0 w-full h-full relative flex flex-col justify-center items-start p-8 md:px-16 md:py-10 group overflow-hidden bg-teal-900">
+         class="carousel-slide snap-center shrink-0 w-full h-full relative flex flex-col justify-center items-start p-8 md:px-16 md:py-6 group overflow-hidden bg-teal-900">
         
         <!-- Immersive Background -->
         <div class="absolute inset-0 z-0 transition-transform duration-1000 group-hover:scale-105">
@@ -206,7 +206,7 @@
 
         <!-- Foreground Content -->
         <div class="relative z-20 max-w-2xl w-full">
-          <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+          <div class="flex flex-wrap gap-2 mb-4">
             {% for tag in project.tags %}
             <span class="bg-white/10 backdrop-blur-md text-white border border-white/20 text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider">
               {{ tag }}
@@ -214,12 +214,12 @@
             {% endfor %}
           </div>
           
-          <!-- Reduced title size on laptops -->
-          <h3 class="font-display font-bold text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl text-white mb-3 md:mb-4 leading-tight drop-shadow-2xl text-balance">
+          <!-- Scaled down further to guarantee it fits within the exact height calculation -->
+          <h3 class="font-display font-bold text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white mb-3 leading-tight drop-shadow-2xl text-balance">
             {{ project.name }}
           </h3>
           
-          <p class="text-white/70 text-sm md:text-base lg:text-lg mb-6 md:mb-8 max-w-lg">
+          <p class="text-white/70 text-sm md:text-base mb-6 max-w-lg">
             A tailored data solution built to solve real business and IT problems.
           </p>
           
