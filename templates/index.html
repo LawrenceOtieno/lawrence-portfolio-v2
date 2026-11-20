@@ -188,13 +188,13 @@
 
   <!-- Carousel Container -->
   <div class="relative w-full">
-    <!-- Track (Mobile auto height, Desktop fixed presentation height) -->
-    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide h-auto min-h-[500px] md:h-[70vh]">
+    <!-- Track: Changed from fixed height to min-height so long content forces it to expand instead of cutting off -->
+    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide min-h-[500px] md:min-h-[60vh]">
       
       {% for project in projects %}
-      <!-- Full-bleed slide -->
+      <!-- Full-bleed slide (h-auto ensures it fills the track perfectly) -->
       <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" 
-         class="carousel-slide snap-center shrink-0 w-full h-full relative flex flex-col justify-center items-start p-8 md:px-20 md:py-16 group overflow-hidden bg-teal-900">
+         class="carousel-slide snap-center shrink-0 w-full h-auto relative flex flex-col justify-center items-start p-8 md:px-20 md:py-24 group overflow-hidden bg-teal-900">
         
         <!-- Immersive Background -->
         <div class="absolute inset-0 z-0 transition-transform duration-1000 group-hover:scale-105">
@@ -214,12 +214,12 @@
             {% endfor %}
           </div>
           
-          <!-- Reduced md:text-6xl to md:text-5xl to ensure it fits on laptops -->
-          <h3 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 leading-tight drop-shadow-2xl">
+          <!-- Scaled down the text on laptops so long titles never push the button off-screen -->
+          <h3 class="font-display font-bold text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-tight drop-shadow-2xl text-balance">
             {{ project.name }}
           </h3>
           
-          <p class="text-white/70 text-sm md:text-lg lg:text-xl mb-6 md:mb-8 max-w-lg">
+          <p class="text-white/70 text-sm md:text-base lg:text-lg mb-8 max-w-lg">
             A tailored data solution built to solve real business and IT problems.
           </p>
           
@@ -233,7 +233,7 @@
       {% endfor %}
 
       <!-- Creative End Marker Slide -->
-      <a href="#contact" class="carousel-slide snap-center shrink-0 w-full h-full relative flex flex-col justify-center items-center p-8 md:p-24 bg-[#0B3B3C] group overflow-hidden text-center">
+      <a href="#contact" class="carousel-slide snap-center shrink-0 w-full h-auto relative flex flex-col justify-center items-center p-8 md:p-24 bg-[#0B3B3C] group overflow-hidden text-center">
         
         <!-- Immersive Background -->
         <div class="absolute inset-0 bg-gradient-to-tr from-teal-900 via-teal-900/80 to-[#051820] z-0"></div>
