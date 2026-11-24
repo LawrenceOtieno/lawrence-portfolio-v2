@@ -6,26 +6,24 @@
      HERO
      ═══════════════════════════════════════════════════════════════════ -->
 <section class="relative overflow-hidden bg-teal-900 text-paper-50">
-  <div aria-hidden="true"
-       class="absolute -top-40 -right-40 w-[32rem] h-[32rem] rounded-full bg-teal-500/20 blur-3xl pointer-events-none"></div>
+  <div aria-hidden="true" class="absolute -top-40 -right-40 w-[32rem] h-[32rem] rounded-full bg-teal-500/20 blur-3xl pointer-events-none"></div>
 
   <div class="relative max-w-shell mx-auto px-6 pt-24 pb-20 text-center">
-    <p class="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-teal-300 text-xs font-semibold uppercase tracking-[.2em] px-4 py-2 rounded-full mb-8">
+    <p class="hero-stagger stagger-1 inline-flex items-center gap-2 bg-white/5 border border-white/10 text-teal-300 text-xs font-semibold uppercase tracking-[.2em] px-4 py-2 rounded-full mb-8">
       <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
       Flexible Across Remote, Hybrid &amp; On-Site Roles
     </p>
 
-    <h1 class="font-display font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-5xl mx-auto text-paper-50 text-balance">
+    <h1 class="hero-stagger stagger-2 font-display font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-5xl mx-auto text-paper-50 text-balance">
       Bridging the gap:
       <span class="block text-orange-500 mt-2 text-balance">People. Processes. Systems.</span>
     </h1>
 
-    <p class="text-paper-100/70 max-w-2xl mx-auto mt-8 text-base md:text-lg leading-relaxed">
-      I’m Lawrence Otieno, a Technical Business Analyst &amp; ETL Data Engineer. I analyze business needs and build data products, systems, and ETL pipelines that solve real business and IT problems.
-      <span class="text-teal-300 font-medium">Python · SQL · Excel · Flask · and more.</span>
+    <p class="hero-stagger stagger-3 text-paper-100/70 max-w-xl mx-auto mt-8 text-base md:text-lg leading-relaxed">
+      I'm Lawrence Otieno, a Technical Business Analyst & ETL Data Engineer building reliable data products, systems, and pipelines that solve real business problems.
     </p>
 
-    <div class="flex flex-wrap justify-center gap-3 mt-10">
+    <div class="hero-stagger stagger-4 flex flex-wrap justify-center gap-3 mt-10">
       <a href="#work" class="bg-orange-500 hover:bg-orange-700 text-white font-semibold px-7 py-3 rounded-full transition-colors">
         See my work
       </a>
@@ -35,9 +33,10 @@
     </div>
   </div>
 
-  <div class="border-t border-white/10 bg-teal-900/70">
-    <div class="overflow-hidden py-3">
-      <div id="trust-ticker" class="flex gap-12 whitespace-nowrap animate-marquee text-sm text-teal-300/80 font-medium w-max">
+  <!-- Tech Ticker -->
+  <div class="border-t border-white/10 bg-teal-900/70 overflow-hidden">
+    <div class="py-3 relative flex overflow-x-hidden group">
+      <div class="animate-marquee whitespace-nowrap flex gap-12 text-sm text-teal-300/80 font-medium w-max group-hover:[animation-play-state:paused]">
         <span>Python · SQL · Pandas · NumPy</span><span class="text-orange-500">•</span>
         <span>Power BI · Looker · Excel</span><span class="text-orange-500">•</span>
         <span>Streamlit · Plotly · Flask</span><span class="text-orange-500">•</span>
@@ -53,7 +52,7 @@
      APPROACH SECTION
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="approach" class="max-w-shell mx-auto px-6 py-20 dark:text-paper-50 transition-colors duration-300">
-  <div class="text-center mb-14">
+  <div class="text-center mb-14 reveal">
     <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">
       How I work
     </h2>
@@ -63,110 +62,84 @@
   </div>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <article class="bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300">
-      <div class="w-11 h-11 rounded-lg bg-teal-500/10 dark:bg-teal-500/20 text-teal-700 dark:text-teal-300 grid place-items-center text-xl mb-4">◈</div>
+    <article class="reveal bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300">
+      <div class="icon-hover-diamond w-11 h-11 rounded-lg bg-teal-500/10 dark:bg-teal-500/20 text-teal-700 dark:text-teal-300 grid place-items-center text-xl mb-4">◈</div>
       <h3 class="font-display font-semibold text-ink-900 dark:text-white mb-2">Requirement clarity</h3>
       <p class="text-sm text-ink-500 dark:text-paper-100/70 leading-relaxed">I translate ambiguous business needs into structured, testable requirements before a single line of code is written.</p>
     </article>
 
-    <article class="bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300">
-      <div class="w-11 h-11 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-orange-700 dark:text-orange-500 grid place-items-center text-xl mb-4">⚡</div>
+    <article class="reveal bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300" style="transition-delay: 100ms;">
+      <div class="icon-hover-bolt w-11 h-11 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-orange-700 dark:text-orange-500 grid place-items-center text-xl mb-4">⚡</div>
       <h3 class="font-display font-semibold text-ink-900 dark:text-white mb-2">Automation-first</h3>
       <p class="text-sm text-ink-500 dark:text-paper-100/70 leading-relaxed">I automate repetitive workflows to eliminate manual overhead. In operations, repetition is a bug, not a feature.</p>
     </article>
 
-    <article class="bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300">
+    <article class="reveal bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300" style="transition-delay: 200ms;">
       <div class="w-11 h-11 rounded-lg bg-teal-500/10 dark:bg-teal-500/20 text-teal-700 dark:text-teal-300 grid place-items-center text-xl mb-4">⌘</div>
       <h3 class="font-display font-semibold text-ink-900 dark:text-white mb-2">Documented end-to-end</h3>
       <p class="text-sm text-ink-500 dark:text-paper-100/70 leading-relaxed">SOPs, runbooks, and KPI definitions anyone can follow, so the work survives without me in the room.</p>
     </article>
 
-    <article class="bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300">
-      <div class="w-11 h-11 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-orange-700 dark:text-orange-500 grid place-items-center text-xl mb-4">◎</div>
+    <article class="reveal bg-white dark:bg-[#0B3B3C] rounded-card border border-line dark:border-white/10 shadow-card p-6 hover:shadow-lift transition-all duration-300" style="transition-delay: 300ms;">
+      <div class="icon-hover-target w-11 h-11 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-orange-700 dark:text-orange-500 grid place-items-center text-xl mb-4">◎</div>
       <h3 class="font-display font-semibold text-ink-900 dark:text-white mb-2">Tested, not assumed</h3>
-      <p class="text-sm text-ink-500 dark:text-paper-100/70 leading-relaxed">I rigorously verify fixes before shipping, moving beyond 'probably works' to proven reliability. Every ETL pipeline, system, and data product I deliver provides metrics you can trust.</p>
+      <p class="text-sm text-ink-500 dark:text-paper-100/70 leading-relaxed">I rigorously verify fixes before shipping, moving beyond 'probably works' to proven reliability.</p>
     </article>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     ABOUT SECTION
+     ABOUT SECTION (STICKY)
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="about" class="bg-white dark:bg-[#051820] border-y border-line dark:border-white/10 py-24 transition-colors duration-300">
   <div class="max-w-shell mx-auto px-6">
-    <div class="text-center mb-20">
+    <div class="text-center mb-20 reveal">
       <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">My Journey</h2>
       <p class="text-ink-500 dark:text-paper-100/70 mt-4 max-w-xl mx-auto text-lg">How I bridge the gap between business needs, data architecture, and technical execution.</p>
     </div>
 
-    <div class="relative max-w-4xl mx-auto">
-      <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-line dark:bg-white/10 -translate-x-1/2" aria-hidden="true"></div>
+    <div class="about-container grid md:grid-cols-2 gap-12 items-start">
+      <!-- Sticky Photo -->
+      <div class="about-sticky-photo hidden md:flex justify-center items-center p-4">
+        <div class="w-full max-w-sm aspect-[3/4] rounded-[3rem] overflow-hidden border-8 border-white dark:border-white/5 shadow-2xl relative">
+          <div class="absolute inset-0 bg-teal-900/20 z-10 mix-blend-overlay"></div>
+          <img src="{{ url_for('static', filename='images/lawrence-img.jpeg') }}" alt="Lawrence Otieno" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"/>
+        </div>
+      </div>
 
-      <!-- Item 1 -->
-      <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 md:mb-24 group">
-        <div class="w-full md:w-[45%] mb-8 md:mb-0 md:text-right pr-0 md:pr-8">
+      <!-- Scrolling Chapters -->
+      <div class="relative flex flex-col gap-12 py-4" id="about-chapters">
+        <!-- Progress Line -->
+        <div class="timeline-line hidden md:block absolute left-[-1.5rem] top-0 bottom-0">
+          <div class="timeline-progress" id="timeline-progress" style="height: 0%;"></div>
+        </div>
+
+        <!-- Chapter 1 -->
+        <div class="about-chapter active transition-opacity duration-500">
           <span class="text-orange-500 font-bold text-sm tracking-widest uppercase mb-2 block">Foundations</span>
           <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-4">Bridging Business &amp; Tech</h3>
           <p class="text-ink-500 dark:text-paper-100/70 leading-relaxed">My journey began with a deep-seated fascination with how technology impacts day-to-day operational efficiency. Pursuing a degree in Business Information Technology allowed me to establish a robust framework for alignment between systems architecture and organizational needs.</p>
         </div>
-        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white dark:bg-[#051820] border-4 border-teal-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
-          <div class="w-2 h-2 rounded-full bg-teal-500"></div>
-        </div>
-        <div class="w-full md:w-[45%] pl-0 md:pl-8 flex justify-center md:justify-start">
-          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-white/10 shadow-card bg-paper-100 dark:bg-white/5">
-            <img src="{{ url_for('static', filename='images/about/about-img-1.jpg') }}" alt="Foundations" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
-          </div>
-        </div>
-      </div>
 
-      <!-- Item 2 -->
-      <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-16 md:mb-24 group">
-        <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-0 md:pl-8">
+        <!-- Chapter 2 -->
+        <div class="about-chapter transition-opacity duration-500">
           <span class="text-teal-500 font-bold text-sm tracking-widest uppercase mb-2 block">Core Expertise</span>
           <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-4">Infrastructure &amp; Operations</h3>
           <p class="text-ink-500 dark:text-paper-100/70 leading-relaxed">Building upon my academic foundation, I spent several years specializing in ICT support and systems administration. Managing networks, utilizing tools like Jira and ServiceNow, and deploying infrastructure allowed me to sharpen my approach to process optimization and problem-solving.</p>
         </div>
-        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white dark:bg-[#051820] border-4 border-orange-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
-          <div class="w-2 h-2 rounded-full bg-orange-500"></div>
-        </div>
-        <div class="w-full md:w-[45%] pr-0 md:pr-8 flex justify-center md:justify-end">
-          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-white/10 shadow-card bg-paper-100 dark:bg-white/5">
-            <img src="{{ url_for('static', filename='images/about/about-img-2.jpg') }}" alt="Core Expertise" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
-          </div>
-        </div>
-      </div>
 
-      <!-- Item 3 -->
-      <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 md:mb-24 group">
-        <div class="w-full md:w-[45%] mb-8 md:mb-0 md:text-right pr-0 md:pr-8">
+        <!-- Chapter 3 -->
+        <div class="about-chapter transition-opacity duration-500">
           <span class="text-orange-500 font-bold text-sm tracking-widest uppercase mb-2 block">Evolution</span>
           <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-4">Data Analytics &amp; Automation</h3>
           <p class="text-ink-500 dark:text-paper-100/70 leading-relaxed">To drive deeper value, my focus evolved toward transforming raw logs into structural insights. By integrating Python, SQL, and Excel workflows into analytics and pipeline development, I focus on automating repeatable data processes and mapping out complex business requirements.</p>
         </div>
-        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white dark:bg-[#051820] border-4 border-teal-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
-          <div class="w-2 h-2 rounded-full bg-teal-500"></div>
-        </div>
-        <div class="w-full md:w-[45%] pl-0 md:pl-8 flex justify-center md:justify-start">
-          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-white/10 shadow-card bg-paper-100 dark:bg-white/5">
-            <img src="{{ url_for('static', filename='images/about/about-img-3.jpg') }}" alt="Evolution" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
-          </div>
-        </div>
-      </div>
 
-      <!-- Item 4 -->
-      <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group">
-        <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-0 md:pl-8">
+        <!-- Chapter 4 -->
+        <div class="about-chapter transition-opacity duration-500">
           <span class="text-teal-500 font-bold text-sm tracking-widest uppercase mb-2 block">Vision</span>
           <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-4">Continuous Excellence</h3>
           <p class="text-ink-500 dark:text-paper-100/70 leading-relaxed">I am dedicated to tackling engineering challenges where technology scales seamlessly. Whether building efficient data workflows, setting up system integrations, or generating reproducible documentation, my goal is to deliver impactful, data-driven solutions.</p>
-        </div>
-        <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex w-10 h-10 rounded-full bg-white dark:bg-[#051820] border-4 border-orange-500 items-center justify-center z-10 group-hover:scale-110 transition-transform">
-          <div class="w-2 h-2 rounded-full bg-orange-500"></div>
-        </div>
-        <div class="w-full md:w-[45%] pr-0 md:pr-8 flex justify-center md:justify-end">
-          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-white/10 shadow-card bg-paper-100 dark:bg-white/5">
-            <img src="{{ url_for('static', filename='images/about/about-img-4.jpg') }}" alt="Vision" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
-          </div>
         </div>
       </div>
     </div>
@@ -174,35 +147,27 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     PORTFOLIO (WORK) SECTION - FULL BLEED AUTO-CAROUSEL
+     PORTFOLIO (WORK) SECTION
      ═══════════════════════════════════════════════════════════════════ -->
-<section id="work" class="bg-[#051820] transition-colors duration-300 scroll-mt-20 pb-12">
-  
-  <!-- Smaller Header Block to save vertical space -->
+<section id="work" class="bg-[#051820] transition-colors duration-300 scroll-mt-20 pb-12 overflow-hidden">
   <div class="max-w-shell mx-auto px-6 pt-16 pb-8 flex flex-col items-center text-center">
     <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Selected Work</h2>
-    <p class="text-paper-100/70 mt-2 max-w-lg text-sm md:text-base">Real-world business, IT, and data applications</p>
+    <p class="text-paper-100/70 mt-2 max-w-lg text-sm md:text-base">Real-World Applications.</p>
   </div>
 
-  <!-- Carousel Container -->
-  <div class="relative w-full">
-    <!-- Track: Auto expands using min-height instead of a forced height calculation -->
-    <div id="work-carousel" class="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide min-h-[450px] md:min-h-[500px]">
+  <div class="relative w-full max-w-6xl mx-auto">
+    <div id="work-carousel" class="w-full overflow-hidden select-none cursor-grab active:cursor-grabbing">
       
       {% for project in projects %}
-      <!-- Full-bleed slide -->
       <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" 
-         class="carousel-slide snap-center shrink-0 w-full h-auto relative flex flex-col justify-center items-start p-8 md:px-16 md:py-12 group overflow-hidden bg-teal-900">
+         class="carousel-slide relative flex flex-col justify-center items-start p-8 md:px-16 md:py-12 group overflow-hidden bg-teal-900 w-full">
         
-        <!-- Immersive Background -->
         <div class="absolute inset-0 z-0 transition-transform duration-1000 group-hover:scale-105">
-          <!-- Gradient Overlays for depth -->
           <div class="absolute inset-0 bg-gradient-to-r from-[#051820] via-[#051820]/80 to-transparent z-10"></div>
           <div class="absolute inset-0 bg-gradient-to-t from-[#051820] via-transparent to-transparent z-10"></div>
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(242,138,28,0.15),transparent_60%)] z-10"></div>
         </div>
 
-        <!-- Foreground Content -->
         <div class="relative z-20 max-w-2xl w-full">
           <div class="flex flex-wrap gap-2 mb-4">
             {% for tag in project.tags %}
@@ -212,16 +177,14 @@
             {% endfor %}
           </div>
           
-          <!-- Scaled text to ensure it always fits nicely on laptop screens -->
           <h3 class="font-display font-bold text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white mb-3 leading-tight drop-shadow-2xl text-balance">
             {{ project.name }}
           </h3>
           
           <p class="text-white/70 text-sm md:text-base mb-8 max-w-lg">
-            A tailored data solution built to solve real business and IT problems.
+            {{ project.description }}
           </p>
           
-          <!-- CTA Pill -->
           <span class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-700 text-white font-semibold px-6 py-2.5 md:px-8 md:py-3 rounded-full text-base md:text-lg transition-all duration-300 group-hover:translate-x-2 shadow-xl shadow-orange-500/20">
             View Project 
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
@@ -230,20 +193,15 @@
       </a>
       {% endfor %}
 
-      <!-- Creative End Marker Slide -->
-      <a href="#contact" class="carousel-slide snap-center shrink-0 w-full h-auto relative flex flex-col justify-center items-center p-8 md:p-24 bg-[#0B3B3C] group overflow-hidden text-center">
-        
-        <!-- Immersive Background -->
+      <!-- End Marker -->
+      <a href="#contact" class="carousel-slide relative flex flex-col justify-center items-center p-8 md:p-24 bg-[#0B3B3C] group overflow-hidden text-center w-full">
         <div class="absolute inset-0 bg-gradient-to-tr from-teal-900 via-teal-900/80 to-[#051820] z-0"></div>
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(242,138,28,0.2),transparent_60%)] z-10"></div>
-        
         <div class="relative z-20">
           <h3 class="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 drop-shadow-2xl">
             That's a Wrap
           </h3>
-          <p class="text-teal-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light">
-            More to follow.
-          </p>
+          <p class="text-teal-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light">More to follow.</p>
         </div>
       </a>
 
@@ -252,18 +210,17 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     CASE STUDIES SECTION
+     CASE STUDIES
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="case-studies" class="bg-white dark:bg-[#051820] border-y border-line dark:border-white/10 py-24 transition-colors duration-300">
   <div class="max-w-shell mx-auto px-6">
-    <div class="text-center mb-16">
+    <div class="text-center mb-16 reveal">
       <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">Case Studies</h2>
       <p class="text-ink-500 dark:text-paper-100/70 mt-4 max-w-xl mx-auto text-lg">Deep dives into how I uncover user needs and build impactful data products.</p>
     </div>
-
     <div class="grid md:grid-cols-2 gap-8">
       {% for cs in case_studies %}
-      <div class="bg-white dark:bg-[#0B3B3C] rounded-2xl border border-line dark:border-white/10 shadow-card hover:shadow-lift hover:-translate-y-1 transition-all duration-300 overflow-hidden group flex flex-col">
+      <div class="reveal bg-white dark:bg-[#0B3B3C] rounded-2xl border border-line dark:border-white/10 shadow-card hover:shadow-lift hover:-translate-y-1 transition-all duration-300 overflow-hidden group flex flex-col">
         <a href="{{ cs.view_url }}" class="relative aspect-[16/9] overflow-hidden bg-teal-900 block">
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(242,138,28,0.15),transparent_50%)] z-0"></div>
           <img src="{{ url_for('static', filename=cs.image) }}" alt="{{ cs.title }}" class="relative z-10 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.opacity='0';" />
@@ -272,21 +229,12 @@
           </div>
         </a>
         <div class="p-8 flex flex-col flex-grow">
-          <div class="flex flex-wrap gap-2 mb-4">
-            {% for tag in cs.tags %}
-            <span class="bg-paper-50 dark:bg-white/5 text-teal-700 dark:text-teal-300 text-xs font-semibold px-3 py-1 rounded-full border border-line dark:border-white/10">{{ tag }}</span>
-            {% endfor %}
-          </div>
           <h3 class="font-display text-2xl font-bold text-teal-900 dark:text-white mb-3 group-hover:text-orange-500 transition-colors">
             <a href="{{ cs.view_url }}">{{ cs.title }}</a>
           </h3>
           <p class="text-ink-500 dark:text-paper-100/70 text-sm leading-relaxed mb-8 flex-grow">{{ cs.summary }}</p>
-          <div class="flex flex-wrap items-center gap-4 mt-auto">
+          <div class="flex items-center gap-4 mt-auto">
             <a href="{{ cs.view_url }}" class="bg-teal-900 hover:bg-teal-700 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors">View Case Study</a>
-            <a href="{{ url_for('static', filename=cs.pdf_file) }}" download class="text-teal-700 dark:text-teal-300 hover:text-orange-500 text-sm font-semibold flex items-center gap-2 transition-colors">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-              Download PDF
-            </a>
           </div>
         </div>
       </div>
@@ -296,46 +244,158 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════
-     TESTIMONIALS SECTION
+     COMPANIES & ORGANIZATIONS
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="companies" class="bg-white dark:bg-[#051820] py-24 transition-colors duration-300">
+  <div class="max-w-shell mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">Companies & Organizations</h2>
+      <p class="text-ink-500 dark:text-paper-100/70 mt-4 max-w-xl mx-auto text-lg">Places I have contributed my skills and expertise.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {% for c in companies %}
+      <div class="reveal bg-white dark:bg-[#0B3B3C] border border-line dark:border-white/10 rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lift hover:-translate-y-1 transition-all duration-300">
+        <div class="h-20 w-full flex items-center justify-center mb-4 grayscale hover:grayscale-0 transition-all duration-300">
+          <div class="w-16 h-16 rounded-full bg-teal-500/10 flex items-center justify-center text-teal-700 dark:text-teal-300 font-bold text-xl">
+             {{ c.name[0] }}
+          </div>
+        </div>
+        <h3 class="font-display font-bold text-ink-900 dark:text-white text-base leading-tight mb-2">{{ c.name }}</h3>
+        <p class="text-sm text-ink-500 dark:text-paper-100/70 flex items-center gap-1 justify-center">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          {{ c.city }}, {{ c.country }}
+        </p>
+        <p class="text-xs text-teal-500 mt-2 font-medium">{{ c.role }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     GALLERY
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="gallery" class="bg-paper-50 dark:bg-[#051820] border-t border-line dark:border-white/10 py-24 transition-colors duration-300">
+  <div class="max-w-shell mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">Gallery</h2>
+      <p class="text-ink-500 dark:text-paper-100/70 mt-4 max-w-xl mx-auto text-lg">A visual showcase of my data products.</p>
+    </div>
+
+    <!-- Filter Chips -->
+    <div class="flex flex-wrap justify-center gap-2 mb-10 reveal">
+      <button class="filter-chip active bg-teal-900 text-white px-4 py-1.5 rounded-full text-sm font-semibold transition-colors" data-filter="all">All</button>
+      <button class="filter-chip bg-white dark:bg-white/5 text-ink-500 dark:text-paper-100 border border-line dark:border-white/10 px-4 py-1.5 rounded-full text-sm font-semibold hover:border-teal-500 transition-colors" data-filter="Dashboards">Dashboards</button>
+      <button class="filter-chip bg-white dark:bg-white/5 text-ink-500 dark:text-paper-100 border border-line dark:border-white/10 px-4 py-1.5 rounded-full text-sm font-semibold hover:border-teal-500 transition-colors" data-filter="Machine Learning">Machine Learning</button>
+      <button class="filter-chip bg-white dark:bg-white/5 text-ink-500 dark:text-paper-100 border border-line dark:border-white/10 px-4 py-1.5 rounded-full text-sm font-semibold hover:border-teal-500 transition-colors" data-filter="Pipelines & Automation">Pipelines & Automation</button>
+      <button class="filter-chip bg-white dark:bg-white/5 text-ink-500 dark:text-paper-100 border border-line dark:border-white/10 px-4 py-1.5 rounded-full text-sm font-semibold hover:border-teal-500 transition-colors" data-filter="Analytics">Analytics</button>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="gallery-grid reveal" id="gallery-grid">
+      {% for g in gallery %}
+      <div class="gallery-item {% if loop.first %}large{% endif %} group cursor-pointer" data-tag="{{ g.tag }}" data-title="{{ g.title }}" data-img="{{ url_for('static', filename=g.img) }}">
+        <div class="browser-frame h-full bg-[#0B3B3C] flex flex-col">
+          <div class="browser-dots">
+            <div class="browser-dot bg-red-500/80"></div>
+            <div class="browser-dot bg-yellow-500/80"></div>
+            <div class="browser-dot bg-green-500/80"></div>
+          </div>
+          <div class="relative overflow-hidden flex-grow aspect-[16/10]">
+             <div class="absolute inset-0 bg-teal-900/20 z-10 group-hover:bg-transparent transition-colors duration-300"></div>
+             <div class="absolute inset-0 flex items-center justify-center z-0 bg-teal-900 border border-white/5">
+                <span class="text-white/30 text-xs px-4 text-center">Loading Asset...</span>
+             </div>
+             <img src="{{ url_for('static', filename=g.img) }}" alt="{{ g.title }}" class="relative z-10 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" loading="lazy" decoding="async" onerror="this.style.opacity='0';" />
+          </div>
+          <div class="p-4 bg-white dark:bg-[#0B3B3C] border-t border-line dark:border-white/10 flex justify-between items-center z-20">
+            <h3 class="font-display font-semibold text-teal-900 dark:text-white text-sm truncate pr-2">{{ g.title }}</h3>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-teal-500 bg-teal-500/10 px-2 py-0.5 rounded">{{ g.tag }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-12 text-sm text-ink-500 dark:text-paper-100/50 italic reveal">
+      Art in my work.
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Dialog -->
+<dialog id="gallery-dialog" class="backdrop:bg-black/80 bg-transparent p-0 m-auto w-full max-w-4xl outline-none overflow-visible">
+  <div class="bg-white dark:bg-[#0B3B3C] rounded-xl overflow-hidden shadow-2xl relative border border-line dark:border-white/10">
+    <button id="close-dialog" class="absolute top-4 right-4 z-50 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-black/80 transition-colors">✕</button>
+    <div class="browser-dots bg-[#051820]">
+      <div class="browser-dot bg-red-500/80"></div>
+      <div class="browser-dot bg-yellow-500/80"></div>
+      <div class="browser-dot bg-green-500/80"></div>
+    </div>
+    <div class="relative w-full max-h-[75vh] bg-[#051820] flex items-center justify-center overflow-hidden p-2">
+       <img id="dialog-img" src="" alt="Expanded view" class="max-w-full max-h-[75vh] object-contain rounded border border-white/10"/>
+    </div>
+    <div class="p-6 bg-white dark:bg-[#0B3B3C] flex justify-between items-center">
+      <div>
+        <h3 id="dialog-title" class="font-display font-bold text-xl text-teal-900 dark:text-white"></h3>
+        <span id="dialog-tag" class="text-xs font-bold uppercase tracking-wider text-teal-500"></span>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     TESTIMONIALS (3-Card Center Focus)
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="testimonials" class="bg-teal-900 py-24 overflow-hidden text-paper-50">
-  <div class="max-w-shell mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-    <div>
+  <div class="max-w-shell mx-auto px-6 mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+    <div class="reveal">
       <h2 class="font-display text-3xl md:text-4xl font-bold text-white">What people say</h2>
       <p class="text-teal-300 mt-3 max-w-lg">Feedback from colleagues, clients, and technical collaborators.</p>
     </div>
-    <p class="hidden md:flex text-sm text-teal-300/70 items-center gap-2">Swipe or scroll horizontally <span aria-hidden="true">→</span></p>
+    <div class="hidden md:flex gap-4 reveal">
+       <button id="prev-test" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">←</button>
+       <span id="test-counter" class="flex items-center font-display font-semibold text-teal-300">1 / 9</span>
+       <button id="next-test" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">→</button>
+    </div>
   </div>
 
-  <div class="relative max-w-shell mx-auto">
-    <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-6 pb-8 scrollbar-hide" style="scroll-padding-left: 1.5rem;">
+  <div class="relative w-full max-w-[90rem] mx-auto">
+    <div id="testimonials-track" class="flex gap-6 px-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-12 items-center" style="scroll-behavior: smooth;">
       {% for t in testimonials %}
-      <div class="snap-start shrink-0 w-[85vw] md:w-[380px] bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col backdrop-blur-sm">
-        <div class="flex gap-1 text-orange-500 mb-6">
+      <div class="testimonial-card snap-center shrink-0 w-[85vw] md:w-[380px] bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col backdrop-blur-sm min-h-[400px] cursor-pointer" data-index="{{ loop.index0 }}">
+        
+        <!-- Photo -->
+        <div class="flex justify-center mb-4">
+          <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-teal-500/50 bg-teal-700 flex items-center justify-center">
+            {% if t.anonymous %}
+              <svg class="w-10 h-10 text-teal-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            {% else %}
+              <img src="{{ url_for('static', filename=t.photo) }}" alt="Portrait of {{ t.name }}" class="w-full h-full object-cover" onerror="this.style.display='none';"/>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Stars -->
+        <div class="flex justify-center gap-1 text-orange-500 mb-3">
           {% for i in range(1, 6) %}
             {% if t.rating >= i %}<span>★</span>
             {% elif t.rating >= i - 0.5 %}<span class="opacity-50">★</span>
             {% else %}<span class="text-white/20">★</span>{% endif %}
           {% endfor %}
-          <span class="text-white/40 text-sm ml-2 mt-0.5 font-medium">{{ t.rating }}.0</span>
+          <span class="text-white/60 text-xs ml-1 font-medium">{{ t.rating }}</span>
         </div>
-        <p class="text-white/80 text-sm leading-relaxed flex-grow mb-8 italic">"{{ t.quote }}"</p>
-        <div class="flex items-center gap-4 mt-auto">
-          <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20 flex-shrink-0 bg-teal-700 flex items-center justify-center">
-            {% if t.anonymous %}
-              <span class="font-display font-bold text-teal-200 text-sm">{{ t.initials }}</span>
-            {% else %}
-              <img src="{{ url_for('static', filename=t.photo) }}" alt="{{ t.name }}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-display font-bold text-teal-200 text-lg\'>{{ t.name[0] }}</span>';"/>
-            {% endif %}
-          </div>
-          <div>
-            <h4 class="font-display font-semibold text-white">{{ t.name }}</h4>
-            <p class="text-teal-300 text-xs">{{ t.role }}{% if t.company %}, {{ t.company }}{% endif %}</p>
-          </div>
+
+        <!-- Person -->
+        <div class="text-center mb-4">
+          <h4 class="font-display font-bold text-lg text-white leading-tight">{{ t.name }}</h4>
+          <p class="text-teal-300 text-xs">{{ t.role }}{% if t.company %}, {{ t.company }}{% endif %}</p>
         </div>
+
+        <!-- Quote -->
+        <p class="text-white/80 text-sm leading-relaxed text-center italic mt-2">"{{ t.quote }}"</p>
       </div>
       {% endfor %}
-      <div class="shrink-0 w-6 md:w-12"></div>
     </div>
   </div>
 </section>
@@ -345,14 +405,13 @@
      ═══════════════════════════════════════════════════════════════════ -->
 <section id="faq" class="bg-white dark:bg-[#051820] py-24 border-b border-line dark:border-white/10 transition-colors duration-300">
   <div class="max-w-3xl mx-auto px-6">
-    <div class="text-center mb-14">
+    <div class="text-center mb-14 reveal">
       <h2 class="font-display text-3xl md:text-4xl font-bold text-teal-900 dark:text-white">Frequently Asked Questions</h2>
       <p class="text-ink-500 dark:text-paper-100/70 mt-4">A few things hiring managers often want to know before reaching out.</p>
     </div>
-
     <div class="space-y-4">
       {% for faq in faqs %}
-      <details class="group bg-paper-50 dark:bg-[#0B3B3C] rounded-2xl border border-line dark:border-white/10 overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-colors duration-300">
+      <details class="reveal group bg-paper-50 dark:bg-[#0B3B3C] rounded-2xl border border-line dark:border-white/10 overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-colors duration-300" style="transition-delay: {{ loop.index0 * 50 }}ms;">
         <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-semibold text-teal-900 dark:text-white hover:text-orange-500 transition-colors">
           <span>{{ faq.question }}</span>
           <span class="text-orange-500 transition-transform duration-300 group-open:rotate-45">
@@ -374,7 +433,7 @@
 <section id="contact" class="bg-teal-900 py-24 text-paper-50 relative overflow-hidden">
   <div aria-hidden="true" class="absolute -bottom-40 -left-40 w-[32rem] h-[32rem] rounded-full bg-teal-500/10 blur-3xl pointer-events-none"></div>
 
-  <div class="relative max-w-3xl mx-auto px-6">
+  <div class="relative max-w-3xl mx-auto px-6 reveal">
     <div class="text-center mb-12">
       <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Ready for the right challenge</h2>
       <p class="text-teal-300 mt-4 text-lg">Interested in working with me? Fill out the form and I will get back to you as soon as possible.</p>
@@ -416,4 +475,5 @@
 <script src="{{ url_for('static', filename='js/ticker.js') }}?v=1" defer></script>
 <script src="{{ url_for('static', filename='js/contact.js') }}?v=1" defer></script>
 <script src="{{ url_for('static', filename='js/carousel.js') }}?v=1" defer></script>
+<script src="{{ url_for('static', filename='js/main.js') }}?v=1" defer></script>
 {% endblock %}

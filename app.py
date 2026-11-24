@@ -17,15 +17,15 @@ MAIL_TO   = "lawrenceit38@gmail.com"
 
 # ── Content data ────────────────────────────────────────────────────
 projects = [
-    {"name": "Movies Rating Dashboard", "image": "images/projects/moviesr.png", "tags": ["Python", "HTML", "Streamlit"], "link": "https://github.com/LawrenceOtieno/MovieRatingsDashboard"},
-    {"name": "Gazebo Indoor Environment Generator", "image": "images/projects/gazebo.png", "tags": ["Python", "PX4 Autopilot", "Gazebo"], "link": "https://github.com/LawrenceOtieno/gazebo-indoor-gen"},
-    {"name": "KRA Nil Automator", "image": "images/projects/automator.png", "tags": ["Python", "Playwright", "Waitress"], "link": "https://github.com/LawrenceOtieno/kra-nil-automator"},
-    {"name": "HRM Executive Dashboard", "image": "images/projects/dashboard.png", "tags": ["Python", "Pandas", "Plotly", "Streamlit"], "link": "https://github.com/LawrenceOtieno/hrm-executive-dashboard"},
-    {"name": "NYC TLC A/B Testing", "image": "images/projects/ab-test.png", "tags": ["Python", "SKLearn", "BigQuery"], "link": "#"},
-    {"name": "Customer Churn Turnover - ML", "image": "images/projects/churn-rate.png", "tags": ["Python", "Keras"], "link": "#"},
-    {"name": "PACE Analytical Framework Blog", "image": "images/projects/pace.png", "tags": ["WordPress"], "link": "#"},
-    {"name": "COVID-19 & Youth Bulge Risk", "image": "images/projects/covid-youth.png", "tags": ["Excel", "R", "Research"], "link": "#"},
-    {"name": "HRM Executive Dashboard (Tableau)", "image": "images/projects/hrm.png", "tags": ["Tableau"], "link": "#"},
+    {"name": "Movies Rating Dashboard", "description": "Interactive dashboard analyzing historical movie ratings and audience trends.", "image": "images/projects/moviesr.png", "tags": ["Python", "HTML", "Streamlit"], "link": "https://github.com/LawrenceOtieno/MovieRatingsDashboard"},
+    {"name": "Gazebo Indoor Environment Generator", "description": "Automated 3D environment generation for drone simulation and testing.", "image": "images/projects/gazebo.png", "tags": ["Python", "PX4 Autopilot", "Gazebo"], "link": "https://github.com/LawrenceOtieno/gazebo-indoor-gen"},
+    {"name": "KRA Nil Automator", "description": "End-to-end automated tax filing pipeline eliminating manual data entry.", "image": "images/projects/automator.png", "tags": ["Python", "Playwright", "Waitress"], "link": "https://github.com/LawrenceOtieno/kra-nil-automator"},
+    {"name": "HRM Executive Dashboard", "description": "Executive-level HR analytics dashboard for tracking attrition and retention.", "image": "images/projects/dashboard.png", "tags": ["Python", "Pandas", "Plotly", "Streamlit"], "link": "https://github.com/LawrenceOtieno/hrm-executive-dashboard"},
+    {"name": "NYC TLC A/B Testing", "description": "Statistical analysis and hypothesis testing on NYC taxi trip data.", "image": "images/projects/ab-test.png", "tags": ["Python", "SKLearn", "BigQuery"], "link": "#"},
+    {"name": "Customer Churn Turnover - ML", "description": "Machine learning model predicting customer churn with 85% accuracy.", "image": "images/projects/churn-rate.png", "tags": ["Python", "Keras"], "link": "#"},
+    {"name": "PACE Analytical Framework Blog", "description": "Technical writing on structuring business analytics for maximum impact.", "image": "images/projects/pace.png", "tags": ["WordPress"], "link": "#"},
+    {"name": "COVID-19 & Youth Bulge Risk", "description": "Data research analyzing demographic risks and conflict correlations.", "image": "images/projects/covid-youth.png", "tags": ["Excel", "R", "Research"], "link": "#"},
+    {"name": "HRM Executive Dashboard (Tableau)", "description": "Tableau version of HR analytics providing interactive visual insights.", "image": "images/projects/hrm.png", "tags": ["Tableau"], "link": "#"},
 ]
 
 case_studies = [
@@ -39,7 +39,33 @@ case_studies = [
     },
 ]
 
+companies = [
+    {"name": "Kenya Power & Lighting Company (KPLC)", "city": "Nairobi", "country": "Kenya", "logo": "images/companies/kplc.png", "role": "IT Help Desk Support"},
+    {"name": "Kwick Credit", "city": "Nairobi", "country": "Kenya", "logo": "images/companies/kwick-credit.png", "role": "Data Analyst (Contract)"},
+    {"name": "Low-Income Financial Transformation (L-IFT)", "city": "Goes", "country": "Netherlands", "logo": "images/companies/l-ift.png", "role": "ICT Support"},
+    {"name": "Aesops Ke", "city": "Nairobi", "country": "Kenya", "logo": "images/companies/aesops-ke.png", "role": "Business Analyst"},
+]
+
+gallery = [
+    {"title": "SimbaNet HRM Dashboard", "tag": "Dashboards", "img": "images/gallery/simbanet-hrm-dashboard.png"},
+    {"title": "CineMetrics TV/Movie Intelligence", "tag": "Dashboards", "img": "images/gallery/cinemetrics-tv-movie-intelligence.png"},
+    {"title": "The Recommender Interface", "tag": "Machine Learning", "img": "images/gallery/the-recommender-interface.png"},
+    {"title": "Gazebo Data Collection Pipeline", "tag": "Pipelines & Automation", "img": "images/gallery/gazebo-data-collection-pipeline.png"},
+    {"title": "Nil-Automator", "tag": "Pipelines & Automation", "img": "images/gallery/nil-automator.png"},
+    {"title": "Customer Churn Turnover-ML", "tag": "Machine Learning", "img": "images/gallery/customer-churn-turnover-ml.png"},
+    {"title": "COVID-19 Fatalities and Risk of Conflicts", "tag": "Analytics", "img": "images/gallery/covid-19-fatalities-risk-of-conflicts.png"},
+]
+
 testimonials = [
+    {
+        "name": "Newton Mbugua",
+        "role": "Software Engineer",
+        "company": "Aesops ke",
+        "quote": "Lawrence is the perfect bridge between business needs and technical execution. He played a vital role in automating our requirements pipeline completely transforming our workflow, letting engineering focus on building software. He is firm, hardworking, and passionate about his work.",
+        "rating": 3.5,
+        "photo": "images/testimonials/newton-mbugua.png",
+        "anonymous": False,
+    },
     {
         "name": "John Kamau",
         "role": "Data Team Lead",
@@ -50,13 +76,13 @@ testimonials = [
         "anonymous": False,
     },
     {
-        "name": "Newton Mbugua",
-        "role": "Software Engineer",
-        "company": "Aesops ke",
-        "quote": "Lawrence is the perfect bridge between business needs and technical execution. He played a vital role in automating our requirements pipeline completely transforming our workflow, letting engineering focus on building software. He is firm, hardworking, and passionate about his work.",
-        "rating": 3.5,
-        "photo": "images/testimonials/newton-mbugua.png",
-        "anonymous": False,
+        "name": "Anonymous",
+        "role": "Senior Business Analyst",
+        "company": "Private",
+        "quote": "A brilliant strategist with a sharp eye for workflow bottlenecks. They excelled at gathering stakeholders' chaotic requirements and transforming them into beautifully structured, actionable technical solutions.",
+        "rating": 5,
+        "initials": "SBA",
+        "anonymous": True,
     },
     {
         "name": "Purity Cherono",
@@ -68,6 +94,15 @@ testimonials = [
         "anonymous": False,
     },
     {
+        "name": "Anonymous",
+        "role": "DevOps & Automation Engineer",
+        "company": "Private",
+        "quote": "Transformed our slow, manual data entries into automated, highly efficient pipelines. They possessed a deep understanding of software integrations, significantly cutting down our daily operational friction.",
+        "rating": 4.5,
+        "initials": "DAE",
+        "anonymous": True,
+    },
+    {
         "name": "Norbert Oduor",
         "role": "Data Product Officer",
         "company": "ICEA Lion Group",
@@ -75,6 +110,15 @@ testimonials = [
         "rating": 4.0,
         "photo": "images/testimonials/norbert-oduor.png",
         "anonymous": False,
+    },
+    {
+        "name": "Anonymous",
+        "role": "Product Manager",
+        "company": "Private",
+        "quote": "The perfect cross-functional collaborator for systems optimization. Their unique blend of analytical data parsing and automated process mapping completely revitalized our operational efficiency models.",
+        "rating": 3.5,
+        "initials": "PM",
+        "anonymous": True,
     },
     {
         "name": "Kelly Otieno",
@@ -93,33 +137,6 @@ testimonials = [
         "rating": 5,
         "photo": "images/testimonials/lynn-ajema.png",
         "anonymous": False,
-    },
-    {
-        "name": "Anonymous",
-        "role": "Senior Business Analyst",
-        "company": "Private",
-        "quote": "A brilliant strategist with a sharp eye for workflow bottlenecks. They excelled at gathering stakeholders' chaotic requirements and transforming them into beautifully structured, actionable technical solutions.",
-        "rating": 5,
-        "initials": "SBA",
-        "anonymous": True,
-    },
-    {
-        "name": "Anonymous",
-        "role": "DevOps & Automation Engineer",
-        "company": "Private",
-        "quote": "Transformed our slow, manual data entries into automated, highly efficient pipelines. They possessed a deep understanding of software integrations, significantly cutting down our daily operational friction.",
-        "rating": 4.5,
-        "initials": "DAE",
-        "anonymous": True,
-    },
-    {
-        "name": "Anonymous",
-        "role": "Product Manager",
-        "company": "Private",
-        "quote": "The perfect cross-functional collaborator for systems optimization. Their unique blend of analytical data parsing and automated process mapping completely revitalized our operational efficiency models.",
-        "rating": 3.5,
-        "initials": "PM",
-        "anonymous": True,
     },
 ]
 
@@ -142,12 +159,10 @@ faqs = [
     }
 ]
 
-# ── Context: request URL + root available in every template ─────────
 @app.context_processor
 def inject_globals():
     return {"current_url": request.url, "current_root": request.url_root}
 
-# ── SEO routes ──────────────────────────────────────────────────────
 @app.route("/sitemap.xml")
 def sitemap():
     pages = [
@@ -178,12 +193,12 @@ def robots():
         mimetype="text/plain",
     )
 
-# ── Main routes ─────────────────────────────────────────────────────
 @app.route("/")
 def index():
     return render_template("index.html", projects=projects,
                            case_studies=case_studies,
-                           testimonials=testimonials, faqs=faqs)
+                           testimonials=testimonials, faqs=faqs,
+                           companies=companies, gallery=gallery)
 
 @app.route("/googlefdf100a20e9b9414.html")
 def google_verification():
@@ -242,7 +257,6 @@ def send_email(name, email, phone, message):
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(MAIL_USER, MAIL_PASS)
         server.sendmail(MAIL_USER, MAIL_TO, msg.as_string())
-
 
 if __name__ == "__main__":
     app.run(debug=True)
